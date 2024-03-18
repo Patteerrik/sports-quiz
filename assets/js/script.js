@@ -5,52 +5,52 @@ const myQuestions = [
         a: "Tyson Gay",
         b: "Asafa Powell",
         c: "Maurice Green",
-        d: "Usain Bolt"
+        d: "Usain Bolt",
     },
     correctAnswer: "d"
 },
 
-   {
-    question:("Which country has won the most Worlds cups in football?")
+    {
+    question:("Which country has won the most World cups in football?")
     answer: {
         a: "Netherlands",
         b: "Germany",
-        c: "Brazil"
+        c: "Brazil",
         d: "Argentina";
     },
     correctAnswer: "c"
 },
    
-{
-    question:(""),
+    {
+    question:("Who was the premier league top scorer 22/23?"),
     answer: {
-        a: "Tyson Gay",
-        b: "Asafa Powell",
-        c: "Maurice Green",
-        d: "Usain Bolt"
+        a: "Marcus Rashford",
+        b: "Mohamed Salah",
+        c: "Harry Kane",
+        d: "Erling Haaland",
     },
-    correctAnswer: ""
+    correctAnswer: "d"
 },
 
-{
-    question:(""),
+    {
+    question:("In which sport do teams compete to win the Stanley Cup?"),
     answer: {
-        a: "",
-        b: "",
-        c: "",
-        d: ""
+        a: "Tennis",
+        b: "Hockey",
+        c: "Rugby",
+        d: "Basketball",
     },
-    correctAnswer: ""
+    correctAnswer: "b"
 },
 
-{
-    question:(""),
+    {
+    question:("How many career goals how Lionel Messi scored?"),
     answer: {
-        a: "",
-        b: "",
-        c: "",
-        d: ""
+        a: "826",
+        b: "629",
+        c: "971",
+        d: "582",
     },
-    correctAnswer: ""
+    correctAnswer: "a"
 },
-]
+];
