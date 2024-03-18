@@ -14,3 +14,12 @@ body {
     margin: 0;
     
 }
+
+.quiz-window {
+    width: 400px;
+    height: 400px;
+    border-radius: 68px;
+    background: linear-gradient(145deg, #d0f9ff, #afd2e2);
+    box-shadow:  38px 38px 49px #8ca8b5,
+                -38px -38px 49px #f8ffff;
+}
