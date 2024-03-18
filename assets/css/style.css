@@ -24,6 +24,11 @@ body {
                 -38px -38px 49px #f8ffff;
 }
 
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
 h2 {
     text-align:center;
 }
@@ -39,5 +44,9 @@ ul li {
 
 button {
     width:100px;
+    padding:5px;
+    background-color:#e7eef2;
+    font-size:1rem;
+    cursor:pointer;
     
 }
