@@ -44,6 +44,10 @@ ul li {
     padding:5px;
 }
 
+input {
+    cursor: pointer;
+}
+
 button {
     width:100px;
     padding:5px;
