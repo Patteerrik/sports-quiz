@@ -54,3 +54,11 @@ const myQuestions = [
     correctAnswer: "a"
 },
 ];
+
+const buildQuiz = document.getElementsByClassName("quiz-window");
+let question = document.getElementById("question")
+let a_Text = document.getElementById("a_Text");
+let b_Text = document.getElementById("b_Text");
+let c_Text = document.getElementById("c_Text");
+let d_Text = document.getElementById("d_Text");
+let submit = document.getElementById("submit");
