@@ -57,7 +57,12 @@ var myQuestions = [
     correctAnswer: "a"
 },
 ];
+
 var score = 0;
+
+function startQuiz() {
+    var startingAnswer = 
+}
 
 /* For loop */
 for(var i = 0; i < myQuestions.length; i++)
