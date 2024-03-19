@@ -62,18 +62,10 @@ var score = 0;
 
 function startQuiz() {
     var startingAnswer = 0;
-    showResults = startingAnswer;
+    displayQuestion = startingAnswer;
 }
 
-/* For loop */
-for(var i = 0; i < myQuestions.length; i++)
-   var response = window.question(question[i].question);
-   if (respons == question[i].correctAnswer){
-    score++;
-    alert("Thats correct!");
-   } else {
-    alert("Unfortunately that´s not correct!");
-   }
+
 
 var buildQuiz = document.getElementsByClassName("quiz-window");
 let answerElement = document.getElementsByClassName("answer");
