@@ -58,6 +58,9 @@ let myQuestions = [
 },
 ];
 
+/* For loop */
+for(i = 0; i < myQuestions.length; i++)
+
 let buildQuiz = document.getElementsByClassName("quiz-window");
 let question = document.getElementById("question")
 let a_Text = document.getElementById("a_Text");
