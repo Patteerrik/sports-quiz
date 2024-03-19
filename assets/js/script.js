@@ -61,7 +61,7 @@ var score = 0;
 
 /* For loop */
 for(var i = 0; i < myQuestions.length; i++)
-   var response = window.question(questions[i].question);
+   var response = window.question(question[i].question);
    if (respons == question[i].correctAnswer){
     score++;
     alert("Thats correct!");
@@ -69,7 +69,7 @@ for(var i = 0; i < myQuestions.length; i++)
     alert("Unfortunately that´s not correct!");
    }
 
-let buildQuiz = document.getElementsByClassName("quiz-window");
+var buildQuiz = document.getElementsByClassName("quiz-window");
 let question = document.getElementById("question")
 let a_Text = document.getElementById("a_Text");
 let b_Text = document.getElementById("b_Text");
