@@ -70,11 +70,28 @@ for(var i = 0; i < myQuestions.length; i++)
    }
 
 var buildQuiz = document.getElementsByClassName("quiz-window");
-let question = document.getElementById("question")
-let a_Text = document.getElementById("a_Text");
-let b_Text = document.getElementById("b_Text");
-let c_Text = document.getElementById("c_Text");
-let d_Text = document.getElementById("d_Text");
+let answerElement = document.getElementsByClassName("answer");
+let question = document.getElementById("question");
+let aText = document.getElementById("a_Text");
+let bText = document.getElementById("b_Text");
+let cText = document.getElementById("c_Text");
+let dText = document.getElementById("d_Text");
 let submit = document.getElementById("submit");
+
+
+startingQuiz()
+
+function startingQuiz () {
+
+    deselectAnswers();
+
+    var currentQuiz = quiz[currentQuiz];
+    question.innerText = currentQuiz.question;
+    (document.getElementById("a_Text")).innerText = currentQuiz.a;
+    bText.innerText = currentQuiz.b;
+    cText.innerText = currentQuiz.c;
+
+}
+
 
 submit.addEventListener("clicked", results);
