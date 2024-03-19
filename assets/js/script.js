@@ -44,7 +44,7 @@ const myQuestions = [
 },
 
     {
-    question:("How many career goals how Lionel Messi scored?"),
+    question:("How many career goals has Lionel Messi scored?"),
     answer: {
         a: "826",
         b: "629",
@@ -62,3 +62,4 @@ let b_Text = document.getElementById("b_Text");
 let c_Text = document.getElementById("c_Text");
 let d_Text = document.getElementById("d_Text");
 let submit = document.getElementById("submit");
+
