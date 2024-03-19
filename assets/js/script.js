@@ -62,7 +62,7 @@ var score = 0;
 
 function startQuiz() {
     var startingAnswer = 0;
-    displayQuestion = startingAnswer;
+    displayQuestion = startingAnswer(currentQuestion);
 }
 
 
@@ -78,19 +78,6 @@ let submit = document.getElementById("submit");
 
 let currentQuiz = 0;
 
-startingQuiz()
-
-function startingQuiz () {
-
-    deselectAnswers();
-
-    var currentQuiz = quiz[currentQuiz];
-    question.innerText = currentQuiz.question;
-    (document.getElementById("a_Text")).innerText = currentQuiz.a;
-    bText.innerText = currentQuiz.b;
-    cText.innerText = currentQuiz.c;
-
-}
 
 
 submit.addEventListener("clicked", results);
