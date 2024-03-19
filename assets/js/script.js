@@ -14,12 +14,12 @@ var myQuestions = [
 },
 
     {
-    question:("Which country has won the most World cups in football?")
+    question:("Which country has won the most World cups in football?"),
     answer: {
         a: "Netherlands",
         b: "Germany",
         c: "Brazil",
-        d: "Argentina";
+        d: "Argentina",
     },
     correctAnswer: "c"
 },
