@@ -75,8 +75,6 @@ let cText = document.getElementById("c_Text");
 let dText = document.getElementById("d_Text");
 let submit = document.getElementById("submit");
 
-let currentQuiz = 0;
-
 
 
 submit.addEventListener("clicked", results);
