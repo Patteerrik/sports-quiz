@@ -1,7 +1,7 @@
 
 /* An array with questions with four options with one correct answer 
 */
-let myQuestions = [
+var myQuestions = [
     {
     question:("Who holds the world record in 100 meter sprint?"),
     answer: {
@@ -57,9 +57,17 @@ let myQuestions = [
     correctAnswer: "a"
 },
 ];
+var score = 0;
 
 /* For loop */
-for(i = 0; i < myQuestions.length; i++)
+for(var i = 0; i < myQuestions.length; i++)
+   var response = window.question(questions[i].question);
+   if (respons == question[i].correctAnswer){
+    score++;
+    alert("Thats correct!");
+   } else {
+    alert("Unfortunately that´s not correct!");
+   }
 
 let buildQuiz = document.getElementsByClassName("quiz-window");
 let question = document.getElementById("question")
