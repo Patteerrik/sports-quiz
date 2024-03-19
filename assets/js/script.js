@@ -1,4 +1,7 @@
-const myQuestions = [
+
+/* An array with questions with four options with one correct answer 
+*/
+let myQuestions = [
     {
     question:("Who holds the world record in 100 meter sprint?"),
     answer: {
@@ -55,7 +58,7 @@ const myQuestions = [
 },
 ];
 
-const buildQuiz = document.getElementsByClassName("quiz-window");
+let buildQuiz = document.getElementsByClassName("quiz-window");
 let question = document.getElementById("question")
 let a_Text = document.getElementById("a_Text");
 let b_Text = document.getElementById("b_Text");
@@ -63,3 +66,4 @@ let c_Text = document.getElementById("c_Text");
 let d_Text = document.getElementById("d_Text");
 let submit = document.getElementById("submit");
 
+submit.addEventListener("clicked", results);
