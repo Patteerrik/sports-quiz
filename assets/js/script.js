@@ -61,7 +61,8 @@ var myQuestions = [
 var score = 0;
 
 function startQuiz() {
-    var startingAnswer = 
+    var startingAnswer = 0;
+    showResults = startingAnswer;
 }
 
 /* For loop */
