@@ -58,7 +58,6 @@ var myQuestions = [
 },
 ];
 
-var score = 0;
 
 function startQuiz() {
     var startingAnswer = 0;
