@@ -63,10 +63,12 @@ var myQuestions = [
 
 var startingAnswer = 0;
 
-function(loadQuestion);
+function loadQuestion() {
      
      var questions = questions[loadQuestion]
      document.getElementById("question");
+
+}
 
 
 
