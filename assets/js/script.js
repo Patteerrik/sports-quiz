@@ -37,14 +37,9 @@ var myQuestions = [
 
 
 var startingAnswer = 0;
+var question = document.getElementById("question");
+var options = document.getElementById("answer");
 
-function loadQuestion() {
-     
-     var questions = questions[loadQuestion]
-     document.getElementById("question");
-     document.getElementById();
-
-}
 
 
 
