@@ -77,4 +77,3 @@ let submit = document.getElementById("submit");
 
 
 
-submit.addEventListener("clicked", results);
