@@ -1,12 +1,7 @@
+// This ensures that the javacode doesn´t run before html is fully loaded
 
-// vaiables
-const quiz = document.getElementById("question");
-let answer = document.getElementsByClassName("answer");
-let aText = document.getElementById("a_text");
-let bText = document.getElementById("b_text");
-let cText = document.getElementById("c_text");
-let dText = document.getElementById("d_text");
-let submitButton = document.getElementById("submit");
+document.addEventListener("DOMContentLoaded", function() {
+
 
 // An array with questions with four options with one correct answer 
 
@@ -37,16 +32,27 @@ var myQuestions = [
 
     {
     question:"How many career goals has Lionel Messi scored?",
-    options: ["More than 800", "more than 600", "More than 1000", "More than 900"],
+    options: ["More than 800", "less than 700", "More than 1000", "More than 900"],
     answer: "More than 800"
 },
 ];
+
+// vaiables
+const quiz = document.getElementById("question");
+let answer = document.getElementsByClassName("answer");
+let aText = document.getElementById("a_text");
+let bText = document.getElementById("b_text");
+let cText = document.getElementById("c_text");
+let dText = document.getElementById("d_text");
+let submitButton = document.getElementById("submit");
 
 submit.addEventListener("click", result);
 
 // Declare staring score
 
 var startingAnswer = 0;
+
+}
 
 
 
