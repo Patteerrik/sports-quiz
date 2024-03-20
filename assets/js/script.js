@@ -59,10 +59,15 @@ var myQuestions = [
 ];
 
 
-function startQuiz() {
-    var startingAnswer = 0;
-    displayQuestion = startingAnswer(currentQuestion);
-}
+
+
+var startingAnswer = 0;
+
+function(loadQuestion);
+     
+     var questions = questions[loadQuestion]
+     document.getElementById("question");
+
 
 
 
