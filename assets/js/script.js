@@ -1,6 +1,14 @@
+// vaiables
 
-/* An array with questions with four options with one correct answer 
-*/
+const hquestion = document.getElementById("question");
+const aText = document.getElementById("a_text");
+const bText = document.getElementById("b_text");
+const cText = document.getElementById("c_text");
+const dText = document.getElementById("d_text");
+const submitButton = document.getElementById("submit");
+
+// An array with questions with four options with one correct answer 
+
 var myQuestions = [
     {
     question:"Who holds the world record in 100 meter sprint?",
@@ -35,10 +43,9 @@ var myQuestions = [
 
 
 
-
+// Declare staring score
 var startingAnswer = 0;
-var question = document.getElementById("question");
-var options = document.getElementById("answer");
+
 
 
 
