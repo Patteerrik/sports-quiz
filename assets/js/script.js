@@ -66,14 +66,7 @@ function startQuiz() {
 
 
 
-var buildQuiz = document.getElementsByClassName("quiz-window");
-let answerElement = document.getElementsByClassName("answer");
-let question = document.getElementById("question");
-let aText = document.getElementById("a_Text");
-let bText = document.getElementById("b_Text");
-let cText = document.getElementById("c_Text");
-let dText = document.getElementById("d_Text");
-let submit = document.getElementById("submit");
+
 
 
 
