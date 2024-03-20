@@ -1,5 +1,5 @@
-// vaiables
 
+// vaiables
 const quiz = document.getElementById("question");
 let answer = document.getElementsByClassName("answer");
 let aText = document.getElementById("a_text");
@@ -42,7 +42,7 @@ var myQuestions = [
 },
 ];
 
-
+submit.addEventListener("click", result);
 
 // Declare staring score
 
