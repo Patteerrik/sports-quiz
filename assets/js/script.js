@@ -4,57 +4,32 @@
 var myQuestions = [
     {
     question:"Who holds the world record in 100 meter sprint?",
-    
-        a: "Tyson Gay",
-        b: "Asafa Powell",
-        c: "Maurice Green",
-        d: "Usain Bolt",
-    
-    correctAnswer: "d"
+    options: ["Tyson Gay", "Asafa Powell", "Maurice Green", "Usain Bolt"];
+    answer: "Usain Bolt"
 },
 
     {
     question:"Which country has won the most World cups in football?",
-    
-        a: "Netherlands",
-        b: "Germany",
-        c: "Brazil",
-        d: "Argentina",
-    
-    correctAnswer: "c"
+    options: ["Netherlands", "Germany", "Brazil", "Argentina"];
+    answer: "Brazil"
 },
    
     {
     question:"Who was the premier league top scorer 22/23?",
-    
-        a: "Marcus Rashford",
-        b: "Mohamed Salah",
-        c: "Harry Kane",
-        d: "Erling Haaland",
-    
-    correctAnswer: "d"
+    options: ["Harry Kane", "Erling Haaland", "Mohammed Salah", "Marcus Rashford"];
+    answer: "Erling Haaland"
 },
 
     {
     question:"In which sport do teams compete to win the Stanley Cup?",
-    
-        a: "Tennis",
-        b: "Hockey",
-        c: "Rugby",
-        d: "Basketball",
-    
-    correctAnswer: "b"
+    options: ["Tennis", "Hockey", "Rugby", "Basketball",];
+    answer: "Hockey"
 },
 
     {
     question:"How many career goals has Lionel Messi scored?",
-    
-        a: "826",
-        b: "629",
-        c: "971",
-        d: "582",
-    
-    correctAnswer: "a"
+    options: ["More than 800", "more than 600", "More than 1000", "More than 900"];
+    answer: "More than 800"
 },
 ];
 
@@ -67,6 +42,7 @@ function loadQuestion() {
      
      var questions = questions[loadQuestion]
      document.getElementById("question");
+     document.getElementById();
 
 }
 
