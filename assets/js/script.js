@@ -1,11 +1,12 @@
 // vaiables
 
-const hquestion = document.getElementById("question");
-const aText = document.getElementById("a_text");
-const bText = document.getElementById("b_text");
-const cText = document.getElementById("c_text");
-const dText = document.getElementById("d_text");
-const submitButton = document.getElementById("submit");
+const quiz = document.getElementById("question");
+let answer = document.getElementsByClassName("answer");
+let aText = document.getElementById("a_text");
+let bText = document.getElementById("b_text");
+let cText = document.getElementById("c_text");
+let dText = document.getElementById("d_text");
+let submitButton = document.getElementById("submit");
 
 // An array with questions with four options with one correct answer 
 
@@ -44,6 +45,7 @@ var myQuestions = [
 
 
 // Declare staring score
+
 var startingAnswer = 0;
 
 
