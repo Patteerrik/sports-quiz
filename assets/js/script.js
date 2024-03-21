@@ -46,6 +46,10 @@ let cText = document.getElementById("c_text");
 let dText = document.getElementById("d_text");
 let submitButton = document.getElementById("submit");
 
+// Declare staring score
+
+var startingAnswer = 0;
+
 submitButton.addEventListener("click", result);
 
 function result(){
@@ -73,17 +77,15 @@ function result(){
 }
 
 function loadQuestion() {
-     quiz.textContent = myQuestions.[index].question;
-     aText.textContent = myQuestions.[index].question[0];
-     bText.textContent = myQuestions.[index].question[1];
-     cText.textContent = myQuestions.[index].question[2];
-     dText.textContent = myQuestions.[index].question[3];
+     quiz.textContent = myQuestions.question;
+     aText.textContent = myQuestions.question[0];
+     bText.textContent = myQuestions.question[1];
+     cText.textContent = myQuestions.question[2];
+     dText.textContent = myQuestions.question[3];
 }
 
 loadQuestion(firstAnswer);
 
-// Declare staring score
 
-var startingAnswer = 0;
 
 }
