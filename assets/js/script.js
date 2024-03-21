@@ -1,4 +1,4 @@
-console.log("Connected!")
+
 // This ensures that the javacode doesn´t run before html is fully loaded
 
 document.addEventListener("DOMContentLoaded", function() {
