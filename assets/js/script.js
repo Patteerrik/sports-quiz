@@ -1,3 +1,4 @@
+console.log("Connected!")
 // This ensures that the javacode doesn´t run before html is fully loaded
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -56,20 +57,22 @@ function result(){
     var userAnswer;
     
     // Loop
-    for (var i= 0; i < answer.length; i++) {
+    for (var i = 0; i < answer.length; i++) {
         if (answer[i].checked) {
             userAnswer = answer[i].value;
             break;
         }
     }
 
-    if (userAnswer === myQuestions[firstAnswer].answer) {
+    if (userAnswer === myQuestions.length) {
         alert("That is correct!");
     }  else {
         alert("Sorry that is is not correct. The correct answer is:" + myQuestions[firstAnswer].answer);
     }
 
-    if (firstAnswer = myQuestions.lenght) {
+    firstAnswer++;
+
+    if (firstAnswer === myQuestions.lenght) {
         alert("Contratulations, you´ve finished")
     } else {
         loadQuestion(firstAnswer);
@@ -88,4 +91,4 @@ loadQuestion(firstAnswer);
 
 
 
-}
+});
