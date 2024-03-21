@@ -73,11 +73,17 @@ function result(){
 }
 
 function loadQuestion() {
-    
+     quiz.textContent = myQuestions.[index].question;
+     aText.textContent = myQuestions.[index].question[0];
+     bText.textContent = myQuestions.[index].question[1];
+     cText.textContent = myQuestions.[index].question[2];
+     dText.textContent = myQuestions.[index].question[3];
 }
+
+loadQuestion(firstAnswer);
+
 // Declare staring score
 
 var startingAnswer = 0;
 
 }
-)
