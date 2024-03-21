@@ -81,11 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function loadQuestion() {
+        
         quiz.textContent = myQuestions.question;
-        aText.textContent = myQuestions.question[0];
-        bText.textContent = myQuestions.question[1];
-        cText.textContent = myQuestions.question[2];
-        dText.textContent = myQuestions.question[3];
+        aText.textContent = myQuestions[index]options[0];
+        bText.textContent = myQuestions[index]question[1];
+        cText.textContent = myQuestions[index]question[2];
+        dText.textContent = myQuestions[index]question[3];
     }
 
     loadQuestion(currentQuestion);
