@@ -54,7 +54,7 @@ function result(){
     // Loop
     for (var i= 0; i < answer.length; i++) {
         if (answer[i].checked) {
-            userAnswer = answer[i].ariaValueMax;
+            userAnswer = answer[i].value;
             break;
         }
     }
@@ -62,10 +62,19 @@ function result(){
     if (userAnswer === myQuestions[firstAnswer].answer) {
         alert("That is correct!");
     }  else {
-        alert("sorry that is is not correct. The correct answer is:" + myQuestions[firstAnswer].answer);
+        alert("Sorry that is is not correct. The correct answer is:" + myQuestions[firstAnswer].answer);
+    }
+
+    if (firstAnswer = myQuestions.lenght) {
+        alert("Contratulations, you´ve finished")
+    } else {
+        loadQuestion(firstAnswer);
     }
 }
 
+function loadQuestion() {
+    
+}
 // Declare staring score
 
 var startingAnswer = 0;
