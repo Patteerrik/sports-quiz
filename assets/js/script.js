@@ -46,20 +46,29 @@ let cText = document.getElementById("c_text");
 let dText = document.getElementById("d_text");
 let submitButton = document.getElementById("submit");
 
-submit.addEventListener("click", result);
+submitButton.addEventListener("click", result);
+
+function result(){
+    var userAnswer;
+    
+    // Loop
+    for (var i= 0; i < answer.length; i++) {
+        if (answer[i].checked) {
+            userAnswer = answer[i].ariaValueMax;
+            break;
+        }
+    }
+
+    if (userAnswer === myQuestions[firstAnswer].answer) {
+        alert("That is correct!");
+    }  else {
+        alert("sorry that is is not correct. The correct answer is:" + myQuestions[firstAnswer].answer);
+    }
+}
 
 // Declare staring score
 
 var startingAnswer = 0;
 
 }
-
-
-
-
-
-
-
-
-
-
+)
