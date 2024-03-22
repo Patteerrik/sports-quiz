@@ -52,5 +52,7 @@ h2 {
     background-color:#e7eef2;
     font-size:1.2rem;
     cursor:pointer;
+    margin: 0 auto; 
+    display: block;
     
 }
