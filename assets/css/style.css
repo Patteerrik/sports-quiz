@@ -20,9 +20,9 @@ body {
 @media screen and (min-width: 280px) {
 
     .quiz-window {
-        width: 80%;
-        height: 60%;
-        border-radius: 68px;
+        width: 60%;
+        height: 50%;
+        border-radius: 30px;
         background: linear-gradient(145deg, #d0f9ff, #afd2e2);
         box-shadow:  38px 38px 49px #8ca8b5,
                     -38px -38px 49px #f8ffff;
