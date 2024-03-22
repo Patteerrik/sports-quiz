@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     let currentQuestion = 0;
-    
+
     // vaiables
     const quiz = document.getElementById("question");
     let answer = document.getElementsByClassName("answer");
@@ -59,13 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function answer () {
         var userAnswer;
 
-        // Loop
-        for (var i = 0; i < answer.length; i++) {
-            if (answer[i].checked) {
-                userAnswer = answer[i].value;
-                break;
-            }
-        }
+        
 
         if (userAnswer === myQuestions.length) {
             alert("That is correct!");
