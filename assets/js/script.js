@@ -41,7 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentQuestion = 0;
 
-    
+    function startQuiz () {
+         
+        showQuestion();
+    }
 
     // vaiables
     const quiz = document.getElementById("question");
