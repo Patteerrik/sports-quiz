@@ -11,35 +11,37 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             question: "Who holds the world record in 100 meter sprint?",
             options: ["Tyson Gay", "Asafa Powell", "Maurice Green", "Usain Bolt"],
-            answer: "Usain Bolt"
+            answer: "Usain Bolt",
         },
 
         {
             question: "Which country has won the most World cups in football?",
             options: ["Netherlands", "Germany", "Brazil", "Argentina"],
-            answer: "Brazil"
+            answer: "Brazil",
         },
 
         {
             question: "Who was the premier league top scorer 22/23?",
             options: ["Harry Kane", "Erling Haaland", "Mohammed Salah", "Marcus Rashford"],
-            answer: "Erling Haaland"
+            answer: "Erling Haaland",
         },
 
         {
             question: "In which sport do teams compete to win the Stanley Cup?",
             options: ["Tennis", "Hockey", "Rugby", "Basketball",],
-            answer: "Hockey"
+            answer: "Hockey",
         },
 
         {
             question: "How many career goals has Lionel Messi scored?",
             options: ["More than 800", "less than 700", "More than 1000", "More than 900"],
-            answer: "More than 800"
+            answer: "More than 800",
         },
     ];
 
     let currentQuestion = 0;
+
+    
 
     // vaiables
     const quiz = document.getElementById("question");
@@ -68,13 +70,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function loadQuestion() {
+    function options () {
         
-        quiz.textContent = myQuestions[index].question[0];
-        aText.textContent = myQuestions[index].answer[0];
-        bText.textContent = myQuestions[index].answer[1];
-        cText.textContent = myQuestions[index].answer[2];
-        dText.textContent = myQuestions[index].answer[3];
+        var Answer1 = document.getElementById(a);
+        var Answer2 = document.getElementById(b);
+        var Answer3 = document.getElementById(c);
+        var Answer4 = document.getElementById(d);
+
+        Answer1.innerHTML = question[index].options[0];
+        Answer2.innerHTML = question[index].options[1]
+        Answer3.innerHTML = question[index].options[2]
+        Answer4.innerHTML = question[index].options[3]
+
+
+        
     }
 
     loadQuestion(currentQuestion);
