@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-     let currentQuestion = 0;
+     
 
     // An array with questions with four options with one correct answer 
 
@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     ];
 
+    let currentQuestion = 0;
+    
     // vaiables
     const quiz = document.getElementById("question");
     let answer = document.getElementsByClassName("answer");
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     submitButton.addEventListener("click", result);
 
-    function result() {
+    function answer () {
         var userAnswer;
 
         // Loop
@@ -82,11 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function loadQuestion() {
         
-        quiz.textContent = myQuestions.question;
-        aText.textContent = myQuestions[index]options[0];
-        bText.textContent = myQuestions[index]question[1];
-        cText.textContent = myQuestions[index]question[2];
-        dText.textContent = myQuestions[index]question[3];
+        quiz.textContent = myQuestions[index].question[0];
+        aText.textContent = myQuestions[index].answer[0];
+        bText.textContent = myQuestions[index].answer[1];
+        cText.textContent = myQuestions[index].answer[2];
+        dText.textContent = myQuestions[index].answer[3];
     }
 
     loadQuestion(currentQuestion);
