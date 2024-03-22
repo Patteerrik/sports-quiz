@@ -44,10 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // vaiables
     const quiz = document.getElementById("question");
     let answer = document.getElementsByClassName("answer");
-    let aText = document.getElementById("a_text");
-    let bText = document.getElementById("b_text");
-    let cText = document.getElementById("c_text");
-    let dText = document.getElementById("d_text");
     let submitButton = document.getElementById("submit");
 
     // Declare staring score
