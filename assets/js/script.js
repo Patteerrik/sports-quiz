@@ -59,13 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function answer () {
         var userAnswer;
 
-        
-
-        if (userAnswer === myQuestions.length) {
+        if (userAnswer === myQuestions.answer) {
             alert("That is correct!");
-        } else {
-            alert("Sorry that is is not correct. The correct answer is:") + myQuestions[currentQuestion].answer;
-        }
+        } 
 
         currentQuestion++;
 
