@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         currentQuestion++;
 
-        if (currentQuestion === myQuestions.lenght) {
+        if (userAnswer === myQuestions.length) {
             alert("Contratulations, you´ve finished")
         } else {
             loadQuestion(currentQuestion);
