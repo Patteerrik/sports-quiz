@@ -55,6 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     function showAnswer() {
+        var currentAnswer = myQuestions[questionIndex].answer;
+        if (selectedAnswer === rightAnswer){
+            document.querySelector(".answer:checked").classList.add("rightAnswer");
+        } else { document.querySelector("answer:checked").classList.add("wrongAnswer");
+
+        }
         
     }
 
