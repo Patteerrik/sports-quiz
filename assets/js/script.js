@@ -41,27 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentQuestion = 0;
 
-    function startQuiz () {}
+    
 
     function showAnswer (currentQuestion) {
         if (currentQuestion < myQuestions.length && currentQuestion >= 0) {
             document.getElementById("question")[0].innerHTML = myQuestions[myQuestions].question;
+            document.getElementById("a")[0].textContent = myQuestions.[index].options.a;
         }
     }
 
-    // vaiables
-    const quiz = document.getElementById("question");
-    let answer = document.getElementsByClassName("answer");
-    let submitButton = document.getElementById("submit");
-
-    // Declare staring score
-
-    var startingAnswer = 0;
+    function startQuiz () {}
 
     submitButton.addEventListener("click", result);
 
-    
-
-
-
-});
+    });
