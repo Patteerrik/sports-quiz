@@ -39,14 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     ];
 
-    let currentQuestion = 0;
+ 
 
     
 
     function showAnswer (currentQuestion) {
         if (currentQuestion < myQuestions.length && currentQuestion >= 0) {
             document.getElementById("question")[0].innerHTML = myQuestions[myQuestions].question;
-            document.getElementById("a")[0].textContent = myQuestions.[index].options.a;
+            document.getElementById("a")[0].textContent = myQuestions[index].options.a;
+            document.getElementById("b")[1].textContent = myQuestions[index].options.b;
+            document.getElementById("c")[2].textContent = myQuestions[index].options.c;
+            document.getElementById("d")[3].textContent = myQuestions[index].options.d;
+
         }
     }
 
