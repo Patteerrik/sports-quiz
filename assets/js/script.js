@@ -39,23 +39,31 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     ];
 
- 
+       
+       var questionIndex = 0;
+       var questionElement = document.getElementById("question");
+       var optionsElement = document.getElementsByClassName("answer");
 
     
 
-    function showAnswer (currentQuestion) {
-        if (currentQuestion < myQuestions.length && currentQuestion >= 0) {
-            document.getElementById("question")[0].innerHTML = myQuestions[myQuestions].question;
-            document.getElementById("a")[0].textContent = myQuestions[index].options.a;
-            document.getElementById("b")[1].textContent = myQuestions[index].options.b;
-            document.getElementById("c")[2].textContent = myQuestions[index].options.c;
-            document.getElementById("d")[3].textContent = myQuestions[index].options.d;
+    function showQuestion () {
+            var currentQuestion = myQuestions[questionIndex];
+            questionElement.textContent = currentQuestion.question;
+            for (var i = 0; i < optionsElement.length; i++) {
+                optionsElement[i].textContent = currentQuestion.options[i];
+            }
 
         }
+    function showAnswer() {
+        
     }
 
-    function startQuiz () {}
+   
 
-    submitButton.addEventListener("click", result);
+    var submitButton = document.getElementById("submit");
+    submitButton.addEventListener("click", showAnswer);
+
+
+    showQuestion ();
 
     });
