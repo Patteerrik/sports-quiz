@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         }
+        
     function showAnswer() {
         var currentAnswer = myQuestions[questionIndex].answer;
         if (selectedAnswer === rightAnswer){
@@ -62,12 +63,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
         
+        var submitButton = document.getElementById("submit");
+        submitButton.addEventListener("click", showAnswer);
+
+        //Next question
+        questionIndex++;
+        if (questionIndex < myQuestions.length) {
+            showQuestion()
+        }
+        
     }
 
    
 
-    var submitButton = document.getElementById("submit");
-    submitButton.addEventListener("click", showAnswer);
+    
 
 
     showQuestion ();
