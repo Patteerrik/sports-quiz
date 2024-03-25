@@ -11,31 +11,31 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             question: "Who holds the world record in 100 meter sprint?",
             options: ["Tyson Gay", "Asafa Powell", "Maurice Green", "Usain Bolt"],
-            rightAnswer: "Usain Bolt",
+            answer: "Usain Bolt",
         },
 
         {
             question: "Which country has won the most World cups in football?",
             options: ["Netherlands", "Germany", "Brazil", "Argentina"],
-            rightAnswer: "Brazil",
+            answer: "Brazil",
         },
 
         {
             question: "Who was the premier league top scorer 22/23?",
             options: ["Harry Kane", "Erling Haaland", "Mohammed Salah", "Marcus Rashford"],
-            rightAnswer: "Erling Haaland",
+            answer: "Erling Haaland",
         },
 
         {
             question: "In which sport do teams compete to win the Stanley Cup?",
             options: ["Tennis", "Hockey", "Rugby", "Basketball",],
-            rightAnswer: "Hockey",
+            answer: "Hockey",
         },
 
         {
             question: "How many career goals has Lionel Messi scored?",
             options: ["More than 800", "less than 700", "More than 1000", "More than 900"],
-            rightAnswer: "More than 800",
+            answer: "More than 800",
         },
     ];
 
@@ -44,20 +44,27 @@ document.addEventListener("DOMContentLoaded", function () {
        var questionElement = document.getElementById("question");
        var optionsElement = document.getElementsByClassName("answer");
 
-    
+    function startQuiz() {
+        showQuestion();
+        showOptions();
+    }
 
     function showQuestion () {
-            var currentQuestion = myQuestions[questionIndex];
-            questionElement.textContent = currentQuestion.question;
-            for (var i = 0; i < optionsElement.length; i++) {
-                optionsElement[i].textContent = currentQuestion.options[i];
-            }
+           var hQuestion = document.getElementById("questions");
+           hQuestion.innerHTML = questions[questionsIndex].question;
 
         }
 
     function showAnswer() {
-        var currentAnswer = myQuestions[questionIndex].answer;
-        if (selectedAnswer === rightAnswer){
+        var currentAnswer;
+        var options = document.querySelectorAll(".answer");
+        options.forEach(function(option) {
+            if (option.checked) {
+                currentAnswer = option.textContent;
+            }
+        }
+        var rightAnswer = myQuestions[questionIndex].answer;
+        if (selectedOptions === answer){
             document.querySelector(".answer:checked").classList.add("rightAnswer");
         } else { document.querySelector("answer:checked").classList.add("wrongAnswer");
 
@@ -71,14 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (questionIndex < myQuestions.length) {
             showQuestion()
         }
-        
     }
-
-   
-
     
-
-
-    showQuestion ();
+    showQuestion();
 
     });
