@@ -111,10 +111,15 @@ h2 {
     padding:5px;
     background-color:#e7eef2;
     font-size:1.2rem;
-    cursor:pointer;
     margin: 0 auto; 
     display: block;
+    transition:0.4s;
     
+}
+.sbutton:hover {
+    background-color: #afd2e2;
+    color: black;
+    cursor:pointer;
 }
 
 }
