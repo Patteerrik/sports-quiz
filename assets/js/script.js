@@ -71,17 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
         var correctAnswer = myQuestions[questionIndex].answer;
         
             if (rightAnswer === answer) {
-                increaseScore();
+                score++;
             } else { 
-                decreaseScore();
+                score--;
             }
         }
-        var rightAnswer = myQuestions[questionIndex].answer;
-        if (selectedOptions === answer){
-            document.querySelector(".answer:checked").classList.add("rightAnswer");
-        } else { document.querySelector("answer:checked").classList.add("wrongAnswer");
-
-        }
+       
         
         var submitButton = document.getElementById("submit");
         submitButton.addEventListener("click", showAnswer);
