@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
        
        var questionIndex = 0;
        var score = 0;
-       var questionElements = document.getElementById("question");
-       var optionsElement = document.getElementsByClassName("answer");
+       var questionElement = document.getElementById("question");
+       var optionsElements = document.querySelectorAll(".answer");
        var showScore = document.getElementById("");
 
   
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
            score--;
 }
 
-        showScore.textContent = score;
+        
 
         //Next question
         questionIndex++;
