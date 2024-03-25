@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
        var questionIndex = 0;
        var questionElement = document.getElementById("question");
        var optionsElement = document.getElementsByClassName("answer");
+       var showScore = document.getElementById("");
 
     function startQuiz() {
         showQuestion();
@@ -50,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showQuestion () {
-           var hQuestion = document.getElementById("questions");
-           hQuestion.innerHTML = hQuestion[questionIndex].question;
+           var hQuestion = document.getElementById("question");
+           hQuestion.innerHTML = myQuestions[questionIndex].question;
     }
     
     function showOptions() {
@@ -65,17 +66,32 @@ document.addEventListener("DOMContentLoaded", function () {
            optionA.innerHTML = myQuestions[questionIndex].options[2];
            optionA.innerHTML = myQuestions[questionIndex].options[3];
     }
+     
+    function showAnswer () {
+        var selectedAnswer;
+        var options = document.querySelectorAll(".answer");
+        options.forEach(function(options) {
+            if(options.checked) {
+                    selectedAnswer = options.textContent;
+    }
+}); 
+         var correctAnswer = myQuestions[questionIndex].answer;
+        
+         if (selectedAnswer === correctAnswer) {
+           score++;
+       } else { 
+        score--;
+}
 
-    function showAnswer(rightAnswer) {
-        
-        var correctAnswer = myQuestions[questionIndex].answer;
-        
-            if (rightAnswer === answer) {
-                score++;
-            } else { 
-                score--;
-            }
-        }
+        showScore.textContent = score;
+            
+
+       };
+
+    function showResult() {
+        if(rightAnswer === answer) {
+        document.querySelector(".answer:checked").classList.add(".rightAnswer");
+    }
        
         
         var submitButton = document.getElementById("submit");
@@ -86,4 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (questionIndex < myQuestions.length) {
             showQuestion()
         }
-    });
+    };
+
+    startQuiz()
