@@ -48,8 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
     function showQuestion () {
-           var hQuestion = document.getElementById("question");
-           hQuestion.innerHTML = myQuestions[questionIndex].question;
+           var currentQuestion = myQuestions[questionIndex];
+           questionElement.textContent = currentQuestion.question;
+           for (var i = 0; i < currentQuestion.options.length; i++) {
+            optionsElement[i].textContent = currentQuestion.options[i];
+           }
     }
     
    
