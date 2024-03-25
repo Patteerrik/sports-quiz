@@ -75,7 +75,16 @@ document.addEventListener("DOMContentLoaded", function () {
         if (questionIndex < myQuestions.length) {
             showQuestion();
         } else {
-            alert("Quiz completed! You scored: " + score);
+            alert("Quiz completed! You scored: " + score + " out of 5.");
+            //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
+            var restart = confirm("Do you want you take the quiz again?");
+            if (restart) {
+                questionIndex = 0;
+                score = 0;
+                showQuestion();
+            } else {
+                alert("Thank you for taking the quiz!");
+            }
         } 
 }
 
