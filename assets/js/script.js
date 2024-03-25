@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         {
             question: "In which sport do teams compete to win the Stanley Cup?",
-            options: ["Tennis", "Hockey", "Rugby", "Basketball",],
+            options: ["Tennis", "Hockey", "Rugby", "Basketball"],
             answer: "Hockey",
         },
 
@@ -41,36 +41,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
        
        var questionIndex = 0;
-       var questionElement = document.getElementById("question");
+       var score = 0;
+       var questionElements = document.getElementById("question");
        var optionsElement = document.getElementsByClassName("answer");
        var showScore = document.getElementById("");
 
   
 
-    function showQuestion () {
+    function showQuestion() {
            var currentQuestion = myQuestions[questionIndex];
            questionElement.textContent = currentQuestion.question;
            for (var i = 0; i < currentQuestion.options.length; i++) {
-            optionsElement[i].textContent = currentQuestion.options[i];
+            optionsElements[i].textContent = currentQuestion.options[i];
            }
     }
     
    
      
-    function showAnswer () {
-        var selectedAnswer;
-        var options = document.querySelectorAll(".answer");
-        options.forEach(function(options) {
-            if(options.checked) {
-                    selectedAnswer = options.textContent;
-}
-}); 
+    function showAnswer(selectedAnswer) {
+        
          var correctAnswer = myQuestions[questionIndex].answer;
         
          if (selectedAnswer === correctAnswer) {
            score++;
        } else { 
-        score--;
+           score--;
 }
 
         showScore.textContent = score;
@@ -78,15 +73,20 @@ document.addEventListener("DOMContentLoaded", function () {
         //Next question
         questionIndex++;
         if (questionIndex < myQuestions.length) {
-            showQuestion()
+            showQuestion();
+        } else {
+            alert("Quiz completed! You scored: " + score);
         }
 }
 
        
         
-        var submitButton = document.getElementById("submit");
-        submitButton.addEventListener("click", showAnswer);
-        
+        optionsElements.forEach(function(optionElement) { 
+        optionElement.addEventListener("click", function() {
+            var selectedAnswer = optionElement.textContent;
+            showAnswer(selectedAnswer);
+        });
+    });
         // Start the quiz
         showQuestion();
 });
