@@ -51,16 +51,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showQuestion () {
            var hQuestion = document.getElementById("questions");
-           hQuestion.innerHTML = questions[questionsIndex].question;
+           hQuestion.innerHTML = hQuestion[questionIndex].question;
+    }
+    
+    function showOptions() {
+           var optionA = document.getElementById("option_a");
+           var optionB = document.getElementById("option_b");
+           var optionC = document.getElementById("option_c");
+           var optionD = document.getElementById("option_d");
 
-        }
+           optionA.innerHTML = myQuestions[questionIndex].options[0];
+           optionA.innerHTML = myQuestions[questionIndex].options[1];
+           optionA.innerHTML = myQuestions[questionIndex].options[2];
+           optionA.innerHTML = myQuestions[questionIndex].options[3];
+    }
 
-    function showAnswer() {
-        var currentAnswer;
-        var options = document.querySelectorAll(".answer");
-        options.forEach(function(option) {
-            if (option.checked) {
-                currentAnswer = option.textContent;
+    function showAnswer(rightAnswer) {
+        
+        var correctAnswer = myQuestions[questionIndex].answer;
+        
+            if (rightAnswer === answer) {
+                increaseScore();
+            } else { 
+                decreaseScore();
             }
         }
         var rightAnswer = myQuestions[questionIndex].answer;
@@ -78,8 +91,4 @@ document.addEventListener("DOMContentLoaded", function () {
         if (questionIndex < myQuestions.length) {
             showQuestion()
         }
-    }
-    
-    showQuestion();
-
     });
