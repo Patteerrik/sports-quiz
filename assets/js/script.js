@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
            optionA.innerHTML = myQuestions[questionIndex].options[1];
            optionA.innerHTML = myQuestions[questionIndex].options[2];
            optionA.innerHTML = myQuestions[questionIndex].options[3];
-    }
+}
      
     function showAnswer () {
         var selectedAnswer;
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         options.forEach(function(options) {
             if(options.checked) {
                     selectedAnswer = options.textContent;
-    }
+}
 }); 
          var correctAnswer = myQuestions[questionIndex].answer;
         
@@ -84,24 +84,20 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
         showScore.textContent = score;
-            
-
-       };
-
-    function showResult() {
-        if(rightAnswer === answer) {
-        document.querySelector(".answer:checked").classList.add(".rightAnswer");
-    }
-       
-        
-        var submitButton = document.getElementById("submit");
-        submitButton.addEventListener("click", showAnswer);
 
         //Next question
         questionIndex++;
         if (questionIndex < myQuestions.length) {
             showQuestion()
         }
-    };
+}
+
+       
+        
+        var submitButton = document.getElementById("submit");
+        submitButton.addEventListener("click", showAnswer);
+
+        
+};
 
     startQuiz()
