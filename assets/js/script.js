@@ -45,27 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
        var optionsElement = document.getElementsByClassName("answer");
        var showScore = document.getElementById("");
 
-    function startQuiz() {
-        showQuestion();
-        showOptions();
-    }
+  
 
     function showQuestion () {
            var hQuestion = document.getElementById("question");
            hQuestion.innerHTML = myQuestions[questionIndex].question;
     }
     
-    function showOptions() {
-           var optionA = document.getElementById("option_a");
-           var optionB = document.getElementById("option_b");
-           var optionC = document.getElementById("option_c");
-           var optionD = document.getElementById("option_d");
-
-           optionA.innerHTML = myQuestions[questionIndex].options[0];
-           optionA.innerHTML = myQuestions[questionIndex].options[1];
-           optionA.innerHTML = myQuestions[questionIndex].options[2];
-           optionA.innerHTML = myQuestions[questionIndex].options[3];
-}
+   
      
     function showAnswer () {
         var selectedAnswer;
@@ -96,8 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
         
         var submitButton = document.getElementById("submit");
         submitButton.addEventListener("click", showAnswer);
-
         
-};
+        // Start the quiz
+        showQuestion();
+});
 
-    startQuiz()
+    
