@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showQuestion();
         } else {
             alert("Quiz completed! You scored: " + score);
-        }
+        } 
 }
 
        
