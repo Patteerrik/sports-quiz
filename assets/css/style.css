@@ -109,6 +109,7 @@ h2 {
     background-color: #afd2e2;
     color: black;
     cursor:pointer;
+    transition:0.4s;
 }
 
 .sbutton {
@@ -118,7 +119,7 @@ h2 {
     font-size:1.2rem;
     margin: 0 auto; 
     display: block;
-    transition:0.4s;
+    
     
 }
 .sbutton:hover {
