@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-
+     
 
     // An array with questions with four options with one correct answer 
 
@@ -38,6 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
             answer: "More than 800",
         },
     ];
+        
+    function startQuiz() {
+         document.getElementsByClassName("takequiz");{
+            showQuestion();
+         }
+    }   
 
 
         var questionIndex = 0;
