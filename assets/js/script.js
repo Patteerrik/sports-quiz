@@ -39,12 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     ];
         
-    function startQuiz() {
-         document.getElementsByClassName("takequiz");{
-            showQuestion();
-         }
-    }   
-
+   
 
         var questionIndex = 0;
         var score = 0;
