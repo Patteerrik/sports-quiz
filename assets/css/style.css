@@ -19,6 +19,14 @@ body {
 
 @media screen and (min-width: 280px) {
 
+    /*index.html */
+
+    .welcomewin {
+        
+    }
+
+    /* quiz.html */
+
     .quiz-window {
         width: 60%;
         height: 55%;
