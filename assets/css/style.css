@@ -184,3 +184,12 @@ body {
 }
 
 }
+
+@media screen and (min-width: 900px) {
+
+    /*h1 on index.html*/
+    .welcomewin {
+         width:40%;
+    }
+    
+}
