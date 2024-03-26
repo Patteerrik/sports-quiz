@@ -21,7 +21,7 @@ body {
 
     .quiz-window {
         width: 60%;
-        height: 50%;
+        height: 65%;
         border-radius: 30px;
         background: linear-gradient(145deg, #d0f9ff, #afd2e2);
         box-shadow:  38px 38px 49px #8ca8b5,
@@ -53,6 +53,12 @@ body {
         border-radius:5px;
     }
     
+    .button-window {
+        text-decoration:none;
+        text-align:center;
+        margin-top:50px;
+    }
+
     #homebutton {
         padding: 10px 20px;
         color:black;
