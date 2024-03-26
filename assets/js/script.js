@@ -45,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var score = 0;
         var questionElement = document.getElementById("question");
         var optionsElements = document.querySelectorAll(".answer");
-        var showScore = document.getElementById("");
+        var playAgain = document.getElementById("playagainbutton");
+        var home = document.getElementById("homebutton");
 
 
 
@@ -77,12 +78,17 @@ document.addEventListener("DOMContentLoaded", function () {
             showQuestion();
         } else {
             alert("Quiz completed! You scored: " + score + " out of 5.");
+               playAgain.style.display = "block";
+               home.style.display = "block";
+
             //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
             var restart = confirm("Do you want you take the quiz again?");
             if (restart) {
                 questionIndex = 0;
                 score = 0;
                 showQuestion();
+                playAgain.style.display = "none";
+                home.style.display = "none";
             } else {
                 alert("Thank you for taking the quiz!");
             }
