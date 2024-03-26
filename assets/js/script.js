@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-     
+
 
     // An array with questions with four options with one correct answer 
 
@@ -39,36 +39,36 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     ];
 
-       
-       var questionIndex = 0;
-       var score = 0;
-       var questionElement = document.getElementById("question");
-       var optionsElements = document.querySelectorAll(".answer");
-       var showScore = document.getElementById("");
 
-  
+        var questionIndex = 0;
+        var score = 0;
+        var questionElement = document.getElementById("question");
+        var optionsElements = document.querySelectorAll(".answer");
+        var showScore = document.getElementById("");
+
+
 
     function showQuestion() {
-           var currentQuestion = myQuestions[questionIndex];
-           questionElement.textContent = currentQuestion.question;
-           for (var i = 0; i < currentQuestion.options.length; i++) {
+        var currentQuestion = myQuestions[questionIndex];
+        questionElement.textContent = currentQuestion.question;
+        for (var i = 0; i < currentQuestion.options.length; i++) {
             optionsElements[i].textContent = currentQuestion.options[i];
-           }
+        }
     }
-    
-   
-     
-    function showAnswer(selectedAnswer) {
-        
-         var correctAnswer = myQuestions[questionIndex].answer;
-        
-         if (selectedAnswer === correctAnswer) {
-           score++;
-       } else { 
-           score--;
-}
 
-        
+
+
+    function showAnswer(selectedAnswer) {
+
+        var correctAnswer = myQuestions[questionIndex].answer;
+
+        if (selectedAnswer === correctAnswer) {
+            score++;
+        } else {
+            score--;
+        }
+
+
 
         //Next question
         questionIndex++;
@@ -85,19 +85,19 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 alert("Thank you for taking the quiz!");
             }
-        } 
-}
+        }
+    }
 
-       
-        
-        optionsElements.forEach(function(optionElement) { 
-        optionElement.addEventListener("click", function() {
+
+
+        optionsElements.forEach(function (optionElement) {
+        optionElement.addEventListener("click", function () {
             var selectedAnswer = optionElement.textContent;
             showAnswer(selectedAnswer);
         });
     });
-        // Start the quiz
-        showQuestion();
+    // Start the quiz
+    showQuestion();
 });
 
-    
+
