@@ -23,9 +23,13 @@ body {
     /* h1 */
     .welcomewin {
         background: white;
+        display: flex;
         border-radius: 10px;
         width: 90%;
         border:1px solid;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
     }
     /*p*/
     .content {
@@ -120,6 +124,11 @@ body {
 }
 
 @media screen and (min-width: 600px) {
+ 
+    /*h1 on index.html*/
+    .welcomewin {
+
+    }
 
 .quiz-window {
     width: 600px;
