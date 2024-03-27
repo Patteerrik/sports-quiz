@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var questionIndex = 0;
         var score = 0;
+        var timercount = 10;
+        var timer;
         var questionElement = document.getElementById("question");
         var optionsElements = document.querySelectorAll(".answer");
         var playAgain = document.getElementById("playagainbutton");
@@ -56,23 +58,17 @@ document.addEventListener("DOMContentLoaded", function () {
         for (var i = 0; i < currentQuestion.options.length; i++) {
             optionsElements[i].textContent = currentQuestion.options[i];
         }
+        startTimer();
     }
 
 
 
-    function showAnswer(selectedAnswer) {
-
+    function showAnswer() {
         var correctAnswer = myQuestions[questionIndex].answer;
-
         if (selectedAnswer === correctAnswer) {
             score++;
-        } else {
-            score;
-        }
-
-
-
-        //Next question
+        } 
+        //Next question                //https://sweetalert2.github.io/
         questionIndex++;
         if (questionIndex < myQuestions.length) {
             showQuestion();
@@ -83,28 +79,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
             //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
             var restart = confirm("Do you want you take the quiz again?");
-            if (restart) {
+        if (restart) {
                 questionIndex = 0;
                 score = 0;
                 showQuestion();
                 playAgain.style.display = "none";
                 home.style.display = "none";
-            } else {
+        } else {
                 alert("Thank you for taking the quiz!");
-            }
         }
     }
 
 
+    // Borrowed from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
 
-        optionsElements.forEach(function (optionElement) {
-        optionElement.addEventListener("click", function () {
-            var selectedAnswer = optionElement.textContent;
+    function startTimer() {
+        timer = setInterval(function() {
+            timercount--;
+         if (timercount === 0) {
+            clearInterval(timer);
+            console.log("Time's up!");
+            showAnswer();
+        }
+    },1000);
+}   
+
+            optionsElements.forEach(function (optionElement) {
+            optionElement.addEventListener("click", function () {
+        var selectedAnswer = optionElement.textContent;
             showAnswer(selectedAnswer);
         });
     });
-    // Start the quiz
     showQuestion();
 });
+    
+
+// Start the quiz
+    
+
 
 
