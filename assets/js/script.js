@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    function showAnswer() {
+    function showAnswer(selectedAnswer) {
         var correctAnswer = myQuestions[questionIndex].answer;
         if (selectedAnswer === correctAnswer) {
             score++;
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
          if (timercount === 0) {
             clearInterval(timer);
             console.log("Time's up!");
-            showAnswer();
+            showAnswer("");
         }
     },1000);
 }   
