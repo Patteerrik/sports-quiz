@@ -104,10 +104,11 @@ document.addEventListener("DOMContentLoaded", function () {
         var TimerInterval = setInterval(function() {
             timercount--;
             timer.innerHTML = `00:${timercount}`;
-         if (timercount === 0) {
+        if (timercount === 0) {
             clearInterval(TimerInterval);
+            
             console.log("Time's up!");
-        if (questionIndex === myQuestions.length) {
+        if (questionIndex === myQuestions.length || questionIndex === myQuestions.length - 1) {
             alert(`Time is up! You scored: ${score} out of 5.`)
             playAgain.style.display = "block";
                home.style.display = "block";
