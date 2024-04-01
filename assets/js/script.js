@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
         var questionIndex = 0;
         var score = 0;
         var timercount = 10;
-        var timer;
+        var timer = document.getElementById("timer");
         var questionElement = document.getElementById("question");
-        var optionsElements = document.querySelectorAll(".answer");
+        var optionsElements = document.getElementsByClassName("answer");
         var playAgain = document.getElementById("playagainbutton");
         var home = document.getElementById("homebutton");
 
@@ -58,7 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
         for (var i = 0; i < currentQuestion.options.length; i++) {
             optionsElements[i].textContent = currentQuestion.options[i];
         }
-        startTimer();
+        optionsElements.forEach(function (optionElement) {
+            optionElement.addEventListener("click", function () {
+        var selectedAnswer = optionElement.textContent;
+            showAnswer(selectedAnswer);
+        });
+    });
+    startTimer();
     }
 
 
@@ -68,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (selectedAnswer === correctAnswer) {
             score++;
         } 
-        //Next question                //https://sweetalert2.github.io/
+        //Next question                
         questionIndex++;
         if (questionIndex < myQuestions.length) {
             showQuestion();
@@ -89,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Thank you for taking the quiz!");
         }
     }
+}
 
 
     // Borrowed from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
@@ -104,12 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },1000);
 }   
 
-            optionsElements.forEach(function (optionElement) {
-            optionElement.addEventListener("click", function () {
-        var selectedAnswer = optionElement.textContent;
-            showAnswer(selectedAnswer);
-        });
-    });
+       
     showQuestion();
 });
     
