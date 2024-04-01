@@ -96,11 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Borrowed from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
 
     function startTimer() {
+        var sec = 10;
         timer = setInterval(function() {
+            timer.innerHTML = "10:"-sec;
             timercount--;
          if (timercount === 0) {
             clearInterval(timer);
             console.log("Time's up!");
+            questionIndex++;
             showAnswer("");
         }
     },1000);
