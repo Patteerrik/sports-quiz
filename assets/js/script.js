@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var timercount = 10;
         var timer = document.getElementById("timer");
         var questionElement = document.getElementById("question");
-        var optionsElements = document.getElementsByClassName("answer");
+        var optionsElements = document.querySelectorAll(".answer");
         var playAgain = document.getElementById("playagainbutton");
         var home = document.getElementById("homebutton");
 
@@ -58,17 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
         for (var i = 0; i < currentQuestion.options.length; i++) {
             optionsElements[i].textContent = currentQuestion.options[i];
         }
-        optionsElements.forEach(function (optionElement) {
-            optionElement.addEventListener("click", function () {
-        var selectedAnswer = optionElement.textContent;
-            showAnswer(selectedAnswer);
-        });
-    });
-    startTimer();
+        
+        startTimer();
     }
-
-
-
+    
     function showAnswer(selectedAnswer) {
         var correctAnswer = myQuestions[questionIndex].answer;
         if (selectedAnswer === correctAnswer) {
@@ -79,12 +72,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (questionIndex < myQuestions.length) {
             showQuestion();
         } else {
+            clearInterval(timer);
             alert("Quiz completed! You scored: " + score + " out of 5.");
                playAgain.style.display = "block";
                home.style.display = "block";
 
             //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
-            var restart = confirm("Do you want you take the quiz again?");
+            var restart = confirm("Do you want to take the quiz again?");
         if (restart) {
                 questionIndex = 0;
                 score = 0;
@@ -96,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 }
+
 
 
     // Borrowed from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
@@ -110,6 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     },1000);
 }   
+
+           optionsElements.forEach(function (optionElement) {
+           optionElement.addEventListener("click", function () {
+            var selectedAnswer = optionElement.textContent;
+            showAnswer(selectedAnswer);
+           });
+        });
 
        
     showQuestion();
