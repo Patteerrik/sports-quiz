@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     function showAnswer(selectedAnswer) {
+        if (questionIndex < myQuestions.length) {
         var correctAnswer = myQuestions[questionIndex].answer;
         if (selectedAnswer === correctAnswer) {
             score++;
@@ -76,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Quiz completed! You scored: " + score + " out of 5.");
                playAgain.style.display = "block";
                home.style.display = "block";
-
+             
             //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
-            var restart = confirm("Do you want to take the quiz again?");
+        var restart = confirm("Do you want to take the quiz again?");
         if (restart) {
                 questionIndex = 0;
                 score = 0;
@@ -87,8 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 home.style.display = "none";
         } else {
                 alert("Thank you for taking the quiz!");
-        }
+        } 
+        
     }
+  }
 }
 
 
@@ -104,11 +107,28 @@ document.addEventListener("DOMContentLoaded", function () {
          if (timercount === 0) {
             clearInterval(TimerInterval);
             console.log("Time's up!");
-
+        if (questionIndex === myQuestions.length) {
+            alert(`Time is up! You scored: ${score} out of 5.`)
+            playAgain.style.display = "block";
+               home.style.display = "block";
+        var restart = confirm("Do you want to take the quiz again?");
+        if (restart) {
+                questionIndex = 0;
+                score = 0;
+                showQuestion();
+                playAgain.style.display = "none";
+                home.style.display = "none";
+        } else {
+                alert("Thank you for taking the quiz!");
+        } 
+        }
+        else {
             questionIndex++;
-
             showAnswer();
         }
+    
+    
+    }
     },1000);
 }  
 
