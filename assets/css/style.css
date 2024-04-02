@@ -43,13 +43,14 @@ body {
     /*start button*/
     .rules,
     .takequiz {
+    background:white;    
     padding: 12px;
     color: #000; 
     border: 1px solid #000; 
     border-radius: 5px;
     text-decoration: none;
     font-size: 18px;
-    width: 30%; 
+    width: auto; 
     margin: 0 auto;
     }
 
@@ -133,9 +134,12 @@ body {
     /*h1 on index.html*/
     
 
-    .takequiz {
-        width:10%;
-    }
+.welcomewin {
+    width:80%;
+}    
+.takequiz {
+    width: auto; 
+}
 
 .quiz-window {
     width: 600px;
@@ -189,31 +193,38 @@ body {
 .gamebuttons {
     align-content: center;
 }
-
 }
 
 @media screen and (min-width: 900px) {
 
     /*h1 on index.html*/
-    .welcomewin {
-         width:40%;
-    }
-
-    .takequiz {
-        width:8%;
-    }
+.welcomewin {
+    width:70%;
+}
     
+.takequiz {
+    width: auto; 
+}
 }
 
 @media screen and (min-width: 1200px) {
 
     /*h1 on index.html*/
-    .welcomewin {
-         width:30%;
-    }
+.welcomewin {
+    width:60%;
+}
 
-    .takequiz {
-        width:5%;
-    }
-    
+.takequiz {
+    width: auto; 
+}
+}
+
+@media screen and (min-width: 1600px) {
+
+.welcomewin {
+    width:40%;
+}
+.takequiz {
+    width: auto; 
+}  
 }
