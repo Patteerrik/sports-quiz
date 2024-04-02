@@ -79,10 +79,22 @@ body {
     #rwindow ul {
         list-style-type: non;
         padding-left: 0; 
+        text-align: left;
     }
         
     #rwindow ul li {
         font-size: 15px; 
+    }
+
+    #closewindow {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #d0f9ff;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        color: #000;
+        }
     }
 
     /* quiz.html */
