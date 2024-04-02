@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
         playAgain.style.display = "none";
         home.style.display = "none";
         showQuestion();
-
     }
 
 
@@ -105,39 +104,20 @@ document.addEventListener("DOMContentLoaded", function () {
     function startTimer() {
         timercount = 10;
         timer.innerHTML = `00:${timercount}`;
-        var TimerInterval = setInterval(function () {
+        TimerInterval = setInterval(function () {
             timercount--;
             timer.innerHTML = `00:${timercount}`;
             if (timercount === 0) {
                 clearInterval(TimerInterval);
-
-                
-                if (questionIndex === myQuestions.length || questionIndex === myQuestions.length - 1) {
-
-                    alert(`Time is up! You scored: ${score} out of 5.`)
-                    playAgain.style.display = "block";
-                    home.style.display = "block";
-                    var restart = confirm("Do you want to take the quiz again?");
-                    if (restart) {
-                        restartQuiz();
-                    } else {
-                        alert("Thank you for taking the quiz!");
-                    }
-                }
-                else {
+            if (questionIndex < myQuestions.length) {
                     questionIndex++;
-                    showAnswer();
-
+                    showQuestion();
                 }
-
-
             }
         }, 1000);
     }
 
-
-
-    optionsElements.forEach(function (optionElement) {
+        optionsElements.forEach(function (optionElement) {
         optionElement.addEventListener("click", function () {
             var selectedAnswer = optionElement.textContent;
             showAnswer(selectedAnswer);
@@ -149,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Start the quiz
+
 
 
 
