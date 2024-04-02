@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
 
-
+    var rulesButton = document.getElementById("rules");
+    var rulesWindow = document.getElementById("rwindow");
     var questionIndex = 0;
     var score = 0;
     var timercount = 10;
@@ -50,7 +51,18 @@ document.addEventListener("DOMContentLoaded", function () {
     var playAgain = document.getElementById("playagainbutton");
     var home = document.getElementById("homebutton");
     var TimerInterval;
-
+    
+    
+    
+    rulesButton.addEventListener("click", function() {
+        if (rulesWindow.style.display === "none") {
+           rulesWindow.style.display = "block";
+        } else {
+            rulesWindow.style.display = "none";
+    } 
+});
+        
+   
 
 
     function showQuestion() {
@@ -83,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 playAgain.style.display = "block";
                 home.style.display = "block";
                 
-            
                 //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
                 var restart = confirm("Do you want to take the quiz again?");
                 if (restart) {
@@ -91,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     alert("Thank you for taking the quiz!");
                 }
-
             }
         }
     }
