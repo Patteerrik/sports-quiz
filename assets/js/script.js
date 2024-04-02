@@ -3,7 +3,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-     
+
 
     // An array with questions with four options with one correct answer 
 
@@ -38,17 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
             answer: "More than 800",
         },
     ];
-        
-   
 
-        var questionIndex = 0;
-        var score = 0;
-        var timercount = 10;
-        var timer = document.getElementById("timer");
-        var questionElement = document.getElementById("question");
-        var optionsElements = document.querySelectorAll(".answer");
-        var playAgain = document.getElementById("playagainbutton");
-        var home = document.getElementById("homebutton");
+
+
+    var questionIndex = 0;
+    var score = 0;
+    var timercount = 10;
+    var timer = document.getElementById("timer");
+    var questionElement = document.getElementById("question");
+    var optionsElements = document.querySelectorAll(".answer");
+    var playAgain = document.getElementById("playagainbutton");
+    var home = document.getElementById("homebutton");
 
 
 
@@ -58,41 +58,45 @@ document.addEventListener("DOMContentLoaded", function () {
         for (var i = 0; i < currentQuestion.options.length; i++) {
             optionsElements[i].textContent = currentQuestion.options[i];
         }
-        
+
         startTimer();
     }
-    
+
     function showAnswer(selectedAnswer) {
         if (questionIndex < myQuestions.length) {
-        var correctAnswer = myQuestions[questionIndex].answer;
-        if (selectedAnswer === correctAnswer) {
-            score++;
-        } 
-        //Next question                
-        questionIndex++;
-        if (questionIndex < myQuestions.length) {
-            showQuestion();
-        } else {
-            clearInterval(timer);
-            alert("Quiz completed! You scored: " + score + " out of 5.");
-               playAgain.style.display = "block";
-               home.style.display = "block";
-             
-            //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
-        var restart = confirm("Do you want to take the quiz again?");
-        if (restart) {
-                questionIndex = 0;
-                score = 0;
+            var correctAnswer = myQuestions[questionIndex].answer;
+            if (selectedAnswer === correctAnswer) {
+                score++;
+            }
+            //Next question                
+            questionIndex++;
+            if (questionIndex < myQuestions.length) {
                 showQuestion();
-                playAgain.style.display = "none";
-                home.style.display = "none";
-        } else {
-                alert("Thank you for taking the quiz!");
-        } 
-        
+            } else {
+                clearInterval(timer);
+                alert("Quiz completed! You scored: " + score + " out of 5.");
+                playAgain.style.display = "block";
+                home.style.display = "block";
+
+                //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
+                var restart = confirm("Do you want to take the quiz again?");
+                if (restart) {
+                    restartQuiz();
+                } else {
+                    alert("Thank you for taking the quiz!");
+                }
+
+            }
+        }
     }
-  }
-}
+    function restartQuiz() {
+        questionIndex = 0;
+        score = 0;
+        playAgain.style.display = "none";
+        home.style.display = "none";
+        showQuestion();
+
+    }
 
 
 
@@ -101,54 +105,52 @@ document.addEventListener("DOMContentLoaded", function () {
     function startTimer() {
         timercount = 10;
         timer.innerHTML = `00:${timercount}`;
-        var TimerInterval = setInterval(function() {
+        var TimerInterval = setInterval(function () {
             timercount--;
             timer.innerHTML = `00:${timercount}`;
-        if (timercount === 0) {
-            clearInterval(TimerInterval);
-            
-            console.log("Time's up!");
-        if (questionIndex === myQuestions.length || questionIndex === myQuestions.length - 1) {
-            alert(`Time is up! You scored: ${score} out of 5.`)
-            playAgain.style.display = "block";
-               home.style.display = "block";
-        var restart = confirm("Do you want to take the quiz again?");
-        if (restart) {
-                questionIndex = 0;
-                score = 0;
-                showQuestion();
-                playAgain.style.display = "none";
-                home.style.display = "none";
-        } else {
-                alert("Thank you for taking the quiz!");
-        } 
-        }
-        else {
-            questionIndex++;
-            showAnswer();
-        }
-    
-    
+            if (timercount === 0) {
+                clearInterval(TimerInterval);
+
+                
+                if (questionIndex === myQuestions.length || questionIndex === myQuestions.length - 1) {
+
+                    alert(`Time is up! You scored: ${score} out of 5.`)
+                    playAgain.style.display = "block";
+                    home.style.display = "block";
+                    var restart = confirm("Do you want to take the quiz again?");
+                    if (restart) {
+                        restartQuiz();
+                    } else {
+                        alert("Thank you for taking the quiz!");
+                    }
+                }
+                else {
+                    questionIndex++;
+                    showAnswer();
+
+                }
+
+
+            }
+        }, 1000);
     }
-    },1000);
-}  
 
-   
 
-           optionsElements.forEach(function (optionElement) {
-           optionElement.addEventListener("click", function () {
+
+    optionsElements.forEach(function (optionElement) {
+        optionElement.addEventListener("click", function () {
             var selectedAnswer = optionElement.textContent;
             showAnswer(selectedAnswer);
-           });
         });
+    });
 
-       
+
     showQuestion();
 });
-    
+
 
 // Start the quiz
-    
+
 
 
 
