@@ -59,6 +59,15 @@ body {
         color: #000;
         }
 
+    .ruleswindow {
+        display: none;
+        
+    }
+
+    .ruleswindow ul {
+        list-style-type: none;
+    }
+
     /* quiz.html */
 
     .quiz-window {
