@@ -49,10 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var optionsElements = document.querySelectorAll(".answer");
     var playAgain = document.getElementById("playagainbutton");
     var home = document.getElementById("homebutton");
+    var TimerInterval;
 
 
 
     function showQuestion() {
+        clearInterval(TimerInterval);
+        if (questionIndex < myQuestions.length) {
         var currentQuestion = myQuestions[questionIndex];
         questionElement.textContent = currentQuestion.question;
         for (var i = 0; i < currentQuestion.options.length; i++) {
@@ -61,8 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         startTimer();
     }
+}
 
     function showAnswer(selectedAnswer) {
+        clearInterval(TimerInterval);
         if (questionIndex < myQuestions.length) {
             var correctAnswer = myQuestions[questionIndex].answer;
             if (selectedAnswer === correctAnswer) {
@@ -77,7 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Quiz completed! You scored: " + score + " out of 5.");
                 playAgain.style.display = "block";
                 home.style.display = "block";
-
+                
+            
                 //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
                 var restart = confirm("Do you want to take the quiz again?");
                 if (restart) {
@@ -113,6 +119,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     questionIndex++;
                     showQuestion();
                 }
+            if (questionIndex === myQuestions.length){
+                alert("Time´s up! You scored: " + score + " out of 5.");
+                restartQuiz();
+            }
+
             }
         }, 1000);
     }
