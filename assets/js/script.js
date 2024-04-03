@@ -1,7 +1,6 @@
 
-// This ensures that the javacode doesn´t run before html is fully loaded
-
-document.addEventListener("DOMContentLoaded", function () {
+// This ensures that the javacode doesn´t run before html is fully loaded 
+    document.addEventListener("DOMContentLoaded", function () {
 
 
 
@@ -52,19 +51,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var home = document.getElementById("homebutton");
     var TimerInterval;
     
-    
-    
-    rulesButton.addEventListener("click", function() {
-        if (rulesWindow.style.display === "none") {
-           rulesWindow.style.display = "block";
-        } else {
-            rulesWindow.style.display = "none";
-    } 
-});
-        
-   
 
+    function startQuiz() {
+        document.getElementsByClassName("welcomewin").style.display = "none";
+        document.getElementsByClassName("quiz-window").style.display = "block";
+        showQuestion();
+    }
 
+    document.getElementsByClassName("quiz-window").addEventListener("click", startQuiz);
+
+    
+    /*
+        */
+    
     function showQuestion() {
         clearInterval(TimerInterval);
         if (questionIndex < myQuestions.length) {
@@ -145,8 +144,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-
-    showQuestion();
+    rulesButton.addEventListener("click", function () {
+        if (rulesWindow.style.display === "none") {
+           rulesWindow.style.display = "block";
+        } else {
+            rulesWindow.style.display = "none";
+    } 
+});
+    
 });
 
 
