@@ -100,6 +100,7 @@ body {
     /* quiz.html */
 
     .quiz-window {
+        max-width: 800px;
         position: relative;
         width: 60%;
         height: 65%;
@@ -125,7 +126,7 @@ body {
 
     #timer {
         position: absolute;
-        top: 30%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
@@ -155,7 +156,7 @@ body {
 
     .answerbuttons {
         position: absolute;
-        top: 35%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%);
         display: flex;
@@ -208,7 +209,7 @@ body {
 }
 
 .quiz-window {
-    width: 600px;
+    width: 60%;
     height: 400px;
     border-radius: 68px;
     background: linear-gradient(145deg, #d0f9ff, #afd2e2);
@@ -253,9 +254,12 @@ body {
 
 /* Play again and home */
 .button-window {
-    margin-top: 45px;
-    bottom: 12rem;
-    width: 20%;
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    max-width:300px;
 }
 
 /* Play again and home */
