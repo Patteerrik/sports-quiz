@@ -115,7 +115,7 @@
 
     // Borrowed from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
 
-    /*function startTimer() {
+    function startTimer() {
         timercount = 10;
         timer.innerHTML = `00:${timercount}`;
         TimerInterval = setInterval(function () {
@@ -134,7 +134,7 @@
 
             }
         }, 1000);
-    }*/
+    }
 
         optionsElements.forEach(function (optionElement) {
         optionElement.addEventListener("click", function () {
