@@ -150,7 +150,7 @@
             rulesWindow.style.display = "none";
     } 
 });*/
-    
+    showQuestion();
 });
 
 
