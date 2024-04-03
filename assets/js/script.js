@@ -52,17 +52,16 @@
     var TimerInterval;
     
 
-    function startQuiz() {
-        document.getElementsByClassName("welcomewin").style.display = "none";
-        document.getElementsByClassName("quiz-window").style.display = "block";
+    /*function startQuiz() {
+        document.querySelector(".welcomewin").style.display = "none";
+        document.querySelector(".quiz-window").style.display = "block";
         showQuestion();
     }
 
-    document.getElementsByClassName("quiz-window").addEventListener("click", startQuiz);
+    document.querySelector(".takequiz a").addEventListener("click", startQuiz);*/
 
     
-    /*
-        */
+    
     
     function showQuestion() {
         clearInterval(TimerInterval);
@@ -144,13 +143,13 @@
         });
     });
 
-    rulesButton.addEventListener("click", function () {
+   /*rulesButton.addEventListener("click", function () {
         if (rulesWindow.style.display === "none") {
            rulesWindow.style.display = "block";
         } else {
             rulesWindow.style.display = "none";
     } 
-});
+});*/
     
 });
 
