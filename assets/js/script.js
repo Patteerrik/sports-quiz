@@ -113,7 +113,8 @@
 
 
 
-    // Borrowed from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
+    /* Inspiration from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
+    and https://www.youtube.com/watch?v=_a4XCarxwr8&list=PLsRF5B5IuysdxhEvtJUeiabNHVNMhgS6Z&index=50&t=311s */
 
     function startTimer() {
         timercount = 10;
