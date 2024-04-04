@@ -37,6 +37,36 @@
             options: ["More than 800", "less than 700", "More than 1000", "More than 900"],
             answer: "More than 800",
         },
+
+        {
+            question: "Which athlete won the largest number of gold medals at the Olympic Games?",
+            options: ["Michael Phelps", "Usain Bolt", "Larisa Latynina", "Paavo Nurmi"],
+            answer: "Michael Phelps",
+        },
+        
+        {
+            question: "What sport is considered the most popular in the world?",
+            options: ["Football", "Baseball", "Golf", "Basketball"],
+            answer: "Football",
+        },    
+
+        {
+           question: "How many players are on the field at the same time in a volleyball team?",
+           options: ["4", "5", "6", "7"],
+           answer: "6",
+        },
+
+        {
+           question: "What game is considered the national sport of Japan?",
+           options: ["Football", "Baseball", "Sumo", "Tennis"],
+           answer: "Sumo",
+        },
+
+        {
+           question: "In what country is the biggest tennis tournament Wimbledon taking place?",
+           options: ["United States", "United Kingdom", "France", "Australia"],
+           answer: "United Kingdom",
+        },
     ];
 
     var questionIndex = 0;
@@ -83,7 +113,7 @@
         showQuestion();
         } else {
         clearInterval(timer);
-        alert("Quiz completed! You scored: " + score + " out of 5.");
+        alert("Quiz completed! You scored: " + score + " out of 10.");
         playAgain.style.display = "block";
         home.style.display = "block";
                 
@@ -121,7 +151,7 @@
         showQuestion();
     }
         if (questionIndex === myQuestions.length){
-        alert("Time´s up! You scored: " + score + " out of 5.");
+        alert("Time´s up! You scored: " + score + " out of 10.");
         restartQuiz();
     }
 
