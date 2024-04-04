@@ -109,7 +109,7 @@ body {
         max-width: 800px;
         position: relative;
         width: 80%;
-        height: 55%;
+        height: 65%;
         border-radius: 30px;
         background: linear-gradient(145deg, #d0f9ff, #afd2e2);
         box-shadow:  38px 38px 49px #8ca8b5,
@@ -150,6 +150,7 @@ body {
         margin:10px 0;
         border-radius:5px;
         margin: 5px;
+        text-align:left;
     }
 
     #question {
@@ -183,7 +184,7 @@ body {
         position: fixed;
         bottom: 20px;
         left:50%;
-        width: 30%;
+        width: 35%;
         transform: translate(-50%);
     }
 
@@ -204,9 +205,24 @@ body {
 }
 
 @media screen and (min-width: 400px) {
-    #rwindow ul li {
+
+.answer {
+    padding: 12px;
+    font-size: 15px;
+
+}
+
+#question {
+        font-size:17px
+}
+
+#timer {
+    top:24%;
+}
+
+#rwindow ul li {
         font-size: 14px; 
-    }
+}
 }
 
 @media screen and (min-width: 600px) {
@@ -260,19 +276,16 @@ body {
 /*h2 quiz.html*/
 
 #question {
-    font-size: 1.3rem;
-}
-
-.quiz-window {
-    height:45%;
-}
-
-#question {
+    font-size: 16px;
     text-align:center;
 }
 
+.quiz-window {
+    height:55%;
+}
+
 #timer {
-    top: 20%;
+    top: 23%;
 }
 
 .answerbuttons {
