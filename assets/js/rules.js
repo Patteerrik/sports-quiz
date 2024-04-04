@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     var rulesButton = document.getElementById("rules");
     var rulesWindow = document.getElementById("rwindow");
     var closeRulesButton = document.getElementById("closewindow");

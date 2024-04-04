@@ -39,8 +39,6 @@
         },
     ];
 
-   
-    
     var questionIndex = 0;
     var score = 0;
     var timercount = 10;
@@ -50,7 +48,7 @@
     var playAgain = document.getElementById("playagainbutton");
     var home = document.getElementById("homebutton");
     var TimerInterval;
-    
+
     /*function startQuiz() {
         document.querySelector(".welcomewin").style.display = "none";
         document.querySelector(".quiz-window").style.display = "block";
@@ -136,10 +134,7 @@
         showAnswer(selectedAnswer);
         });
     });
-       
-        
-    
-        showQuestion();
+    showQuestion();
 });
 
 
