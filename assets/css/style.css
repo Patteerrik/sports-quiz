@@ -55,6 +55,7 @@ body {
         font-size: 18px;
         width: auto; 
         margin: 0 auto;
+        cursor: pointer;
     }
 
     .takequiz a {
@@ -294,6 +295,12 @@ body {
 .takequiz {
     width: auto; 
 }
+
+.takequiz:hover,
+#rules:hover {
+    background: #bfd3f3; 
+}
+
 }
 
 @media screen and (min-width: 1200px) {
