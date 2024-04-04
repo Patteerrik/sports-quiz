@@ -285,6 +285,11 @@ body {
     width:70%;
     height: 250px;
 }
+
+/*p*/
+.content {
+    font-size: 1.7rem;
+}
     
 .takequiz {
     width: auto; 
