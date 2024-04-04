@@ -1,6 +1,7 @@
 
 // This ensures that the javacode doesn´t run before html is fully loaded 
     document.addEventListener("DOMContentLoaded", function () {
+
     var rulesButton = document.getElementById("rules");
     var rulesWindow = document.getElementById("rwindow");
 
@@ -59,7 +60,6 @@
     var home = document.getElementById("homebutton");
     var TimerInterval;
     
-
     /*function startQuiz() {
         document.querySelector(".welcomewin").style.display = "none";
         document.querySelector(".quiz-window").style.display = "block";
@@ -68,9 +68,6 @@
 
     document.querySelector(".takequiz a").addEventListener("click", startQuiz);*/
 
-    
-    
-    
     function showQuestion() {
         clearInterval(TimerInterval);
         if (questionIndex < myQuestions.length) {
@@ -82,31 +79,31 @@
 
         startTimer();
     }
-}
+    }
 
     function showAnswer(selectedAnswer) {
         clearInterval(TimerInterval);
         if (questionIndex < myQuestions.length) {
-            var correctAnswer = myQuestions[questionIndex].answer;
-            if (selectedAnswer === correctAnswer) {
-                score++;
+        var correctAnswer = myQuestions[questionIndex].answer;
+        if (selectedAnswer === correctAnswer) {
+        score++;
             }
-            //Next question                
-            questionIndex++;
-            if (questionIndex < myQuestions.length) {
-                showQuestion();
-            } else {
-                clearInterval(timer);
-                alert("Quiz completed! You scored: " + score + " out of 5.");
-                playAgain.style.display = "block";
-                home.style.display = "block";
+        //Next question                
+        questionIndex++;
+        if (questionIndex < myQuestions.length) {
+        showQuestion();
+        } else {
+        clearInterval(timer);
+        alert("Quiz completed! You scored: " + score + " out of 5.");
+        playAgain.style.display = "block";
+        home.style.display = "block";
                 
-                //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
-                var restart = confirm("Do you want to take the quiz again?");
-                if (restart) {
-                    restartQuiz();
-                } else {
-                    alert("Thank you for taking the quiz!");
+        //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
+        var restart = confirm("Do you want to take the quiz again?");
+        if (restart) {
+        restartQuiz();
+        } else {
+            alert("Thank you for taking the quiz!");
                 }
             }
         }
@@ -119,8 +116,6 @@
         showQuestion();
     }
 
-
-
     /* Inspiration from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
     and https://www.youtube.com/watch?v=_a4XCarxwr8&list=PLsRF5B5IuysdxhEvtJUeiabNHVNMhgS6Z&index=50&t=311s */
 
@@ -128,38 +123,33 @@
         timercount = 10;
         timer.innerHTML = `00:${timercount}`;
         TimerInterval = setInterval(function () {
-            timercount--;
-            timer.innerHTML = `00:${timercount}`;
-            if (timercount === 0) {
-                clearInterval(TimerInterval);
-            if (questionIndex < myQuestions.length) {
-                    questionIndex++;
-                    showQuestion();
-                }
-            if (questionIndex === myQuestions.length){
-                alert("Time´s up! You scored: " + score + " out of 5.");
-                restartQuiz();
-            }
+        timercount--;
+        timer.innerHTML = `00:${timercount}`;
+        if (timercount === 0) {
+        clearInterval(TimerInterval);
+        if (questionIndex < myQuestions.length) {
+        questionIndex++;
+        showQuestion();
+    }
+        if (questionIndex === myQuestions.length){
+        alert("Time´s up! You scored: " + score + " out of 5.");
+        restartQuiz();
+    }
 
             }
         }, 1000);
     }
-
         optionsElements.forEach(function (optionElement) {
         optionElement.addEventListener("click", function () {
-            var selectedAnswer = optionElement.textContent;
-            showAnswer(selectedAnswer);
+        var selectedAnswer = optionElement.textContent;
+        showAnswer(selectedAnswer);
         });
     });
-
         closeRulesButton.addEventListener("click", function() {
-            rulesWindow.style.display = "none";
+        rulesWindow.style.display = "none";
         });
     
-
-
-        
-    showQuestion();
+        showQuestion();
 });
 
 
