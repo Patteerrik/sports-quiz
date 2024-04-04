@@ -101,7 +101,7 @@
         questionIndex = 0;
         score = 0;
         playAgain.style.display = "none";
-        home.style.display = "none";
+        home.style.display = "block";
         showQuestion();
     }
 
