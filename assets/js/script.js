@@ -5,6 +5,7 @@
 
 
     // An array with questions with four options with one correct answer 
+    // myQuestion structure borrowed from https://www.sitepoint.com/simple-javascript-quiz/
 
     var myQuestions = [
         {
@@ -144,13 +145,13 @@
         });
     });
 
-   /*rulesButton.addEventListener("click", function () {
+   rulesButton.addEventListener("click", function () {
         if (rulesWindow.style.display === "none") {
            rulesWindow.style.display = "block";
         } else {
             rulesWindow.style.display = "none";
     } 
-});*/
+});
     showQuestion();
 });
 
