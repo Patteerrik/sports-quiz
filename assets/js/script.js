@@ -1,8 +1,16 @@
 
 // This ensures that the javacode doesn´t run before html is fully loaded 
     document.addEventListener("DOMContentLoaded", function () {
+    var rulesButton = document.getElementById("rules");
+    var rulesWindow = document.getElementById("rwindow");
 
-
+        rulesButton.addEventListener("click", function () {
+            if (rulesWindow.style.display === "none") {
+               rulesWindow.style.display = "block";
+            } else {
+                rulesWindow.style.display = "none";
+        } 
+    });
 
     // An array with questions with four options with one correct answer 
     // myQuestion structure borrowed from https://www.sitepoint.com/simple-javascript-quiz/
@@ -39,9 +47,8 @@
         },
     ];
 
-
-    var rulesButton = document.getElementById("rules");
-    var rulesWindow = document.getElementById("rwindow");
+    var closeRulesButton = document.getElementById("closewindow");
+    
     var questionIndex = 0;
     var score = 0;
     var timercount = 10;
@@ -145,13 +152,13 @@
         });
     });
 
-   rulesButton.addEventListener("click", function () {
-        if (rulesWindow.style.display === "none") {
-           rulesWindow.style.display = "block";
-        } else {
+        closeRulesButton.addEventListener("click", function() {
             rulesWindow.style.display = "none";
-    } 
-});
+        });
+    
+
+
+        
     showQuestion();
 });
 
