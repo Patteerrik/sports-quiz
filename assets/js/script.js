@@ -166,7 +166,7 @@
 
         var resultwindow = document.getElementsByClassName("result-window");
         function showResults () {
-            resultwindow.classlist.add("");
+            resultwindow.classlist.add("finished-result");
         }
 
     });
