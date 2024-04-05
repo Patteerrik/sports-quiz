@@ -164,7 +164,11 @@
         showAnswer(selectedAnswer);
         });
 
-        
+        var resultwindow = document.getElementsByClassName("result-window");
+        function showResults () {
+            resultwindow.classlist.add("");
+        }
+
     });
     showQuestion();
 });
