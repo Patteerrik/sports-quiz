@@ -83,14 +83,16 @@
     var TimerInterval;
 
     function showQuestion() {
+        
         clearInterval(TimerInterval);
+        
         if (questionIndex < myQuestions.length) {
         var currentQuestion = myQuestions[questionIndex];
         questionElement.textContent = currentQuestion.question;
         for (var i = 0; i < currentQuestion.options.length; i++) {
             optionsElements[i].textContent = currentQuestion.options[i];
         }
-
+        
         startTimer();
     }
     }
@@ -108,7 +110,8 @@
         showQuestion();
         } else {
         clearInterval(timer);
-        showResult();
+        showResult("Quiz finished! You scored: " + score + " out of 10.");
+        restartQuiz();
         
         
                 
@@ -146,7 +149,7 @@
         showQuestion();
     }
         if (questionIndex === myQuestions.length){
-        alert("Time´s up! You scored: " + score + " out of 10.");
+        showResult("Time´s up! You scored: " + score + " out of 10.");
         restartQuiz();
     }
 
@@ -161,9 +164,9 @@
     });
 
         function showResult(){
-            quizWindow.style.display = "none";
-            resultWindow.style.display = "block";
-            totalscore.textContent = "Your total score:";
+            quizWindow[0].style.display = "none";
+            resultWindow[0].style.display = "block";
+            totalscore[0].textContent = "Your total score:" + score + "/10";
             playAgain.style.display = "block";
             home.style.display = "block";
         }

@@ -154,7 +154,7 @@ body {
     }
 
     .resultwindow {
-        display: block;
+        display: none;
         text-align: center;
         top:30%;
         left:50%;
