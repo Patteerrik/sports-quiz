@@ -163,6 +163,8 @@
         var selectedAnswer = optionElement.textContent;
         showAnswer(selectedAnswer);
         });
+
+        
     });
     showQuestion();
 });

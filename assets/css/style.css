@@ -67,7 +67,7 @@ body {
         background: white;
         display: none; 
         border-radius: 10px;
-        width: 60%;
+        width: 80%;
         height:40%;
         border: 1px solid;
         justify-content: center;
@@ -88,7 +88,7 @@ body {
     }
         
     #rwindow ul li {
-        font-size: 12px; 
+        font-size: 14px; 
     }
 
     #closewindow {
@@ -245,8 +245,8 @@ body {
 }
 
 #rwindow {
-    width:250px;
-    height:280px;
+    width:350px;
+    height:250px;
     bottom:auto;
 }
 
@@ -340,8 +340,8 @@ body {
 }
 
 #rwindow {
-    width:270px;
-    height:310px;
+    width:380px;
+    height:300px;
     bottom:auto;
 }
 
@@ -350,7 +350,7 @@ body {
 }
 
 #rwindow ul li{
-    font-size:17px;
+    font-size:18px;
     padding-left:2px;
 }
 
