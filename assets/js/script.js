@@ -161,6 +161,7 @@
             home.style.display = "block";
 
             playAgain.addEventListener("click", function () {
+                
                 restartQuiz();
             });
     }
