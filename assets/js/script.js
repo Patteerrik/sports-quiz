@@ -112,16 +112,6 @@
         clearInterval(timer);
         showResult("Quiz finished! You scored: " + score + " out of 10.");
         restartQuiz();
-        
-        
-                
-        //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
-        var restart = confirm("Do you want to take the quiz again?");
-        if (restart) {
-        restartQuiz();
-        } else {
-            alert("Thank you for taking the quiz!");
-                }
             }
         }
     }
