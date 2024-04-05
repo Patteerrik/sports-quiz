@@ -77,15 +77,10 @@
     var optionsElements = document.querySelectorAll(".answer");
     var playAgain = document.getElementById("playagainbutton");
     var home = document.getElementById("homebutton");
+    var totalscore = document.getElementsByClassName("totalscore");
+    var resultwindow = document.getElementsByClassName("resultwindow");
+    var quizwindow = document.getElementsByClassName("quiz-window");
     var TimerInterval;
-
-    /*function startQuiz() {
-        document.querySelector(".welcomewin").style.display = "none";
-        document.querySelector(".quiz-window").style.display = "block";
-        showQuestion();
-    }
-
-    document.querySelector(".takequiz a").addEventListener("click", startQuiz);*/
 
     function showQuestion() {
         clearInterval(TimerInterval);
@@ -113,9 +108,9 @@
         showQuestion();
         } else {
         clearInterval(timer);
-        alert("Quiz completed! You scored: " + score + " out of 10.");
-        playAgain.style.display = "block";
-        home.style.display = "block";
+        resultwindow ();
+        
+        
                 
         //Idea from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm 
         var restart = confirm("Do you want to take the quiz again?");
@@ -164,14 +159,17 @@
         showAnswer(selectedAnswer);
         });
 
-        var resultwindow = document.getElementsByClassName("result-window");
-        function showResults () {
-            resultwindow.classlist.add("finished-result");
+        function showResultWindow(){
+            quizwindow.style.display = "none";
+            resultwindow.style.display = "block";
+            totalscore.textContent = "Your total score:";
+            playAgain.style.display = "block";
+            home.style.display = "block";
         }
-
-    });
+       
+    
     showQuestion();
-});
+    });
 
 
 
