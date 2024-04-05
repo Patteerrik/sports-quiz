@@ -163,6 +163,8 @@ body {
         height:25%;
         border-radius:5px;
         border: 1px solid;
+        max-width: 600px;
+        max-height:200px;
     }
 
     #question {
@@ -213,7 +215,15 @@ body {
         height: 50px;
         box-sizing: border-box;
         align-content:center;
-   }
+    }
+
+   .resultwindow {
+        padding-top: 20px;
+    }
+
+    .icon {
+        font-size:25px
+    }
 
    .resultbtnS{
         text-decoration:none;
@@ -361,6 +371,24 @@ body {
 .gamebuttons {
     align-content: center;
 }
+
+.resultwindow {
+    padding-top: 25px;
+    max-width: 600px;
+}
+
+.quizcomplete, .totalscore {
+    font-size:22px
+}
+
+.icon {
+    font-size:30px
+}
+
+.resultbtnS {
+    max-width:300px;
+    bottom:150px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -406,6 +434,10 @@ body {
     background: #bfd3f3; 
 }
 
+.resultbtnS {
+    bottom:200px;
+}
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -419,6 +451,10 @@ body {
 .takequiz {
     width: auto; 
 }
+
+.resultbtnS {
+    bottom:240px;
+}
 }
 
 @media screen and (min-width: 1600px) {
@@ -429,4 +465,8 @@ body {
 .takequiz {
     width: auto; 
 }  
+
+.resultbtnS {
+    bottom:280px;
+}
 }
