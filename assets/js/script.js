@@ -78,8 +78,8 @@
     var playAgain = document.getElementById("playagainbutton");
     var home = document.getElementById("homebutton");
     var totalscore = document.getElementsByClassName("totalscore");
-    var resultwindow = document.getElementsByClassName("resultwindow");
-    var quizwindow = document.getElementsByClassName("quiz-window");
+    var resultWindow = document.getElementsByClassName("resultwindow");
+    var quizWindow = document.getElementsByClassName("quiz-window");
     var TimerInterval;
 
     function showQuestion() {
@@ -108,7 +108,7 @@
         showQuestion();
         } else {
         clearInterval(timer);
-        resultwindow ();
+        showResult();
         
         
                 
@@ -158,10 +158,11 @@
         var selectedAnswer = optionElement.textContent;
         showAnswer(selectedAnswer);
         });
+    });
 
-        function showResultWindow(){
-            quizwindow.style.display = "none";
-            resultwindow.style.display = "block";
+        function showResult(){
+            quizWindow.style.display = "none";
+            resultWindow.style.display = "block";
             totalscore.textContent = "Your total score:";
             playAgain.style.display = "block";
             home.style.display = "block";
