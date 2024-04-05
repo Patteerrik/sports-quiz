@@ -153,6 +153,15 @@ body {
         text-align:left;
     }
 
+    .resultwindow {
+        top:30%;
+        left:50%;
+        background:white;
+        width: 80%;
+        height:55%;
+        border-radius:5px;
+    }
+
     #question {
        position: absolute;
        top: 20px;
