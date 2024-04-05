@@ -118,7 +118,7 @@
     function restartQuiz() {
         questionIndex = 0;
         score = 0;
-        playAgain.style.display = "none";
+        playAgain.style.display = "block";
         home.style.display = "block";
         showQuestion();
     }
@@ -153,13 +153,17 @@
         });
     });
 
-        function showResult(){
+    function showResult(){
             quizWindow[0].style.display = "none";
             resultWindow[0].style.display = "block";
             totalscore[0].textContent = "Your total score:" + score + "/10";
             playAgain.style.display = "block";
             home.style.display = "block";
-        }
+
+            playAgain.addEventListener("click", function () {
+                restartQuiz();
+            });
+    }
        
     
     showQuestion();
