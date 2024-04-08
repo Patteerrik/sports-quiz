@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (rulesWindow.style.display === "none") {
     rulesWindow.style.display = "block";
     } else {
-    rulesWindow.style.display = "none";
+    rulesWindow.style.display = "block";
     } 
     });
     closeRulesButton.addEventListener("click", function() {
