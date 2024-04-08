@@ -121,10 +121,11 @@
         clearInterval(timer);
         showResult("Quiz finished! You scored: " + score + " out of 100.");
         restartQuiz();
-        }
-        }, 3000);
+            }
+        },3000);
     }
-    }
+}
+    
     function restartQuiz() {
         questionIndex = 0;
         score = 0;
