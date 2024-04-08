@@ -222,17 +222,40 @@ body {
     }
     /*Popup window Correct*/
     .correct_popup {
-        display: none;
-        background:white;
-        color: rgb(6, 245, 149);
-
+        position: absolute; 
+        width:130px;
+        font-size:22px;
+        text-align:center;
+        top: 40%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        display: none; 
+        background: white;
+        color: #04a604;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1001;
     }
-
-    /*Popup window incorrect*/
-    .incorrect_popup {
+    
+        
+    
+        /*Popup window incorrect*/
+        .incorrect_popup {
+        position: absolute; 
+        width:130px;
+        font-size:22px;
+        text-align:center;
+        top: 40%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
         display: none;
         background: white;
-        color: red;
+        color: #c70303;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1001; 
     }
 
     .icon {
