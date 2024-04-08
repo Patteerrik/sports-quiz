@@ -223,12 +223,16 @@ body {
     /*Popup window Correct*/
     .correct_popup {
         display: none;
+        background:white;
+        color: rgb(6, 245, 149);
 
     }
 
     /*Popup window incorrect*/
     .incorrect_popup {
         display: none;
+        background: white;
+        color: red;
     }
 
     .icon {

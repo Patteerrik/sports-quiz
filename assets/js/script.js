@@ -108,7 +108,7 @@
         correct_popup.style.display = "block"; //Show correct popup when right answer selected
         } else {
         incorrect_popup.style.display = "block"; // Show incorrect popup when wrong answer selected
-        }
+        } 
         // Inspiration from https://www.w3schools.com/jsref/met_win_settimeout.asp
         setTimeout(function() {
         correct_popup.style.display = "none";
