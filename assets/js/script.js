@@ -102,7 +102,7 @@
         if (questionIndex < myQuestions.length) {
         var correctAnswer = myQuestions[questionIndex].answer;
         if (selectedAnswer === correctAnswer) {
-        score++;
+        score += timercount;
             }
         //Next question                
         questionIndex++;
@@ -110,7 +110,7 @@
         showQuestion();
         } else {
         clearInterval(timer);
-        showResult("Quiz finished! You scored: " + score + " out of 10.");
+        showResult("Quiz finished! You scored: " + score + " out of 100.");
         restartQuiz();
             }
         }
@@ -139,7 +139,7 @@
         showQuestion();
     }
         if (questionIndex === myQuestions.length){
-        showResult("Time´s up! You scored: " + score + " out of 10.");
+        showResult("Time´s up! You scored: " + score + " out of 100.");
         restartQuiz();
     }
 
@@ -156,7 +156,7 @@
     function showResult(){
             quizWindow[0].style.display = "none";
             resultWindow[0].style.display = "block";
-            totalscore[0].textContent = "Your total score:" + score + "/10";
+            totalscore[0].textContent = "Your total score:" + score + "/100";
             playAgain.style.display = "block";
             home.style.display = "block";
 
