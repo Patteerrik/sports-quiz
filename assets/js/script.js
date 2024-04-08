@@ -80,6 +80,8 @@
     var totalscore = document.getElementsByClassName("totalscore");
     var resultWindow = document.getElementsByClassName("resultwindow");
     var quizWindow = document.getElementsByClassName("quiz-window");
+    var correct_popup = document.querySelector(".correct_popup");
+    var incorrect_popup = document.querySelector(".incorrect_popup");
     var TimerInterval;
 
     function showQuestion() {
@@ -103,7 +105,14 @@
         var correctAnswer = myQuestions[questionIndex].answer;
         if (selectedAnswer === correctAnswer) {
         score += timercount;
-            }
+        correct_popup.style.display = "block"; //Show correct popup when right answer selected
+        } else {
+        incorrect_popup.style.display = "block"; // Show incorrect popup when wrong answer selected
+        }
+        // Inspiration from https://www.w3schools.com/jsref/met_win_settimeout.asp
+        setTimeout(function() {
+        correct_popup.style.display = "none";
+        incorrect_popup.style.display = "none";
         //Next question                
         questionIndex++;
         if (questionIndex < myQuestions.length) {
@@ -112,8 +121,9 @@
         clearInterval(timer);
         showResult("Quiz finished! You scored: " + score + " out of 100.");
         restartQuiz();
-            }
         }
+        }, 3000);
+    }
     }
     function restartQuiz() {
         questionIndex = 0;
