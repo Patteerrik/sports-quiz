@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     // An array with questions with four options with one correct answer 
-    // myQuestion structure borrowed from https://www.sitepoint.com/simple-javascript-quiz/
+    // myQuestion structure inspired by https://www.sitepoint.com/simple-javascript-quiz/
 
     var myQuestions = [
         {

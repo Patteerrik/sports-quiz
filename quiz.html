@@ -12,25 +12,29 @@
     <title>Sports quiz!</title>
 </head>
 <body>
+    <!-- Main header -->
     <h1 class="mainh">Sports Quiz! <i class="fa-solid fa-heart-pulse"></i></h1>
                                
     <div class="quiz-window">
         <div class="quiz-question">
-            <h2 id="question">Question</h2>
+            <!-- Quiz question -->
+            <h2 id="question"></h2>
             <div id="timer"></div>
             <div class="answerbuttons">
-                <button class="answer" id="option_a">Answer1</button>
-                <button class="answer" id="option_b">Answer2</button>
-                <button class="answer" id="option_c">Answer3</button>
-                <button class="answer" id="option_d">Answer4</button>
+                <button class="answer"></button>
+                <button class="answer"></button>
+                <button class="answer"></button>
+                <button class="answer"></button>
             </div>
         </div>
+        <!-- Button for play again and Home -->
         <div class="button-window">
         <a class="gamebuttons" id="playagainbutton" href="quiz.html" style="display:none ">Play again</a><br>
         <a class="gamebuttons" id="homebutton" style="display:none ;" href="index.html">Home</a>
        <!-- <a class="gamebuttons" id="highscorebutton" href="">Highscore</a> -->
         </div>
     </div>
+    <!-- Popup window that appears when answering a question -->
     <div class="popup-windows">
         <div class="correct_popup">Correct!<br><i class="fa-solid fa-check fa-beat"></i></div>
         <div class="incorrect_popup">Incorrect!<i class="fa-solid fa-circle-xmark fa-beat"></i></div>
@@ -38,10 +42,11 @@
     <!-- https://www.youtube.com/watch?v=pQr4O1OITJo&t=2538s -->
     <div class="resultwindow">
         <div class="icon"><i class="fa-solid fa-graduation-cap fa-beat"></i></div>
-    <!-- Popup windows -->
+    <!-- Popup window that appears when quiz i finished -->
         
         <div class="quizcomplete"> Gongratulations. You finished the quiz</div>
         <div class="totalscore">Your total score:</div>
+        <!-- Buttons that appears when quiz i finished -->
         <div class="resultbtnS">
         <a class="resultbtnPLAY" href="quiz.html">Play Again</a>
         <a class="resultbtnHOME" href="index.html">Home</a>
@@ -49,7 +54,7 @@
     </div>
     <!--Font awesome-->
     <script src="https://kit.fontawesome.com/ab7ad5c24c.js" crossorigin="anonymous"></script>
-    <!-- Connected to the js file -->
+    <!-- Connected to the js script file -->
     <script src="assets/js/script.js"></script>
     
 </body>
