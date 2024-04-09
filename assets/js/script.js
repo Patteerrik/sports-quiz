@@ -1,6 +1,6 @@
 
 // This ensures that the javacode doesn´t run before html is fully loaded 
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
     
 
@@ -82,6 +82,7 @@
     var quizWindow = document.getElementsByClassName("quiz-window");
     var correct_popup = document.querySelector(".correct_popup");
     var incorrect_popup = document.querySelector(".incorrect_popup");
+    var checkHighscore = document.getElementById("highscorebutton");
     var TimerInterval;
 
     function showQuestion() {
