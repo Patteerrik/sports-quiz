@@ -2,8 +2,6 @@
 // This ensures that the javacode doesn´t run before html is fully loaded 
 document.addEventListener("DOMContentLoaded", function () {
 
-    
-
     // An array with questions with four options with one correct answer 
     // myQuestion structure inspired by https://www.sitepoint.com/simple-javascript-quiz/
 
@@ -68,7 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
            answer: "United Kingdom",
         },
     ];
-
+    
+    //Declaring viariables
     var questionIndex = 0;
     var score = 0;
     var timercount = 10;
@@ -82,18 +81,17 @@ document.addEventListener("DOMContentLoaded", function () {
     var quizWindow = document.getElementsByClassName("quiz-window");
     var correct_popup = document.querySelector(".correct_popup");
     var incorrect_popup = document.querySelector(".incorrect_popup");
-    var checkHighscore = document.getElementById("highscorebutton");
     var TimerInterval;
 
     function showQuestion() {
         
-        clearInterval(TimerInterval);
+        clearInterval(TimerInterval); // Clearing the timer interval
         
-        if (questionIndex < myQuestions.length) {
+        if (questionIndex < myQuestions.length) { // If there are more questions
         var currentQuestion = myQuestions[questionIndex];
-        questionElement.textContent = currentQuestion.question;
+        questionElement.textContent = currentQuestion.question; // Display the question
         for (var i = 0; i < currentQuestion.options.length; i++) {
-            optionsElements[i].textContent = currentQuestion.options[i];
+            optionsElements[i].textContent = currentQuestion.options[i]; // Display the options
         }
         
         startTimer();
@@ -111,27 +109,28 @@ document.addEventListener("DOMContentLoaded", function () {
         incorrect_popup.style.display = "block"; // Show incorrect popup when wrong answer selected
         } 
         // Inspiration from https://www.w3schools.com/jsref/met_win_settimeout.asp
-        setTimeout(function() {
+
+        setTimeout(function() { // Make a popup window appear with correct/incorrect message
         correct_popup.style.display = "none";
         incorrect_popup.style.display = "none";
-        //Next question                
-        questionIndex++;
-        if (questionIndex < myQuestions.length) {
+                       
+        questionIndex++;  //Next question
+        if (questionIndex < myQuestions.length) { // If there are more question show the next
         showQuestion();
-        } else {
+        } else { // If the isn´t more questions 
         clearInterval(timer);
         showResult("Quiz finished! You scored: " + score + " out of 100.");
         restartQuiz();
             }
-        },3000);
+        },3000); //3 seconds paus until the next question
     }
 }
-    
+    // Function for restarting the timer
     function restartQuiz() {
         questionIndex = 0;
         score = 0;
-        playAgain.style.display = "block";
-        home.style.display = "block";
+        playAgain.style.display = "block"; // Makes play again button visible
+        home.style.display = "block"; // Makes home button visible
         showQuestion();
     }
 
@@ -144,13 +143,13 @@ document.addEventListener("DOMContentLoaded", function () {
         TimerInterval = setInterval(function () {
         timercount--;
         timer.innerHTML = `00:${timercount}`;
-        if (timercount === 0) {
+        if (timercount === 0) { 
         clearInterval(TimerInterval);
         if (questionIndex < myQuestions.length) {
         questionIndex++;
         showQuestion();
     }
-        if (questionIndex === myQuestions.length){
+        if (questionIndex === myQuestions.length){ // Ends the quiz if it is the last question
         showResult("Time´s up! You scored: " + score + " out of 100.");
         restartQuiz();
     }
