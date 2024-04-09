@@ -44,10 +44,10 @@ body {
         font-size: 1.3rem;
     }
     /*start button*/
-    #rules,
+    #highscorebutton, #rules,
     .takequiz {
         background:white;    
-        padding: 12px;
+        padding: 8px;
         color: #000; 
         border: 1px solid #000; 
         border-radius: 5px;
