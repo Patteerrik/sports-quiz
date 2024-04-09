@@ -153,6 +153,12 @@ body {
         text-align:left;
     }
 
+    .answer:hover {
+        background: #e2e4e7;
+        cursor:pointer;
+        transition: .5;
+    }
+
     .resultwindow {
         display: none;
         text-align: center;
