@@ -114,9 +114,9 @@
         incorrect_popup.style.display = "none";
                        
         questionIndex++;  //Next question
-        if (questionIndex < myQuestions.length) { // If there are more question show the next
-        showQuestion();
-        } else { // If there isn´t more questions 
+        if (questionIndex < myQuestions.length) { 
+        showQuestion(); // Show the next question
+        } else { // If there aren´t any more questions 
         clearInterval(timer);
         showResult("Quiz finished! You scored: " + score + " out of 100.");
         restartQuiz();
@@ -138,7 +138,7 @@
 
     function startTimer() {
         timercount = 10;
-        timer.innerHTML = `00:${timercount}`;
+        timer.innerHTML = `00:${timercount}`; // Insert timer number 00:10
         TimerInterval = setInterval(function () {
         timercount--;
         timer.innerHTML = `00:${timercount}`;
@@ -155,11 +155,12 @@
 
             }
         }, 1000);
-    }
+    }  
+        // Eventlistener to answer options
         optionsElements.forEach(function (optionElement) {
         optionElement.addEventListener("click", function () {
-        var selectedAnswer = optionElement.textContent;
-        showAnswer(selectedAnswer);
+        var selectedAnswer = optionElement.textContent; //
+        showAnswer(selectedAnswer); 
         });
     });
 
