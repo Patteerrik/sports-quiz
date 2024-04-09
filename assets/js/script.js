@@ -110,14 +110,14 @@ document.addEventListener("DOMContentLoaded", function () {
         } 
         // Inspiration from https://www.w3schools.com/jsref/met_win_settimeout.asp
 
-        setTimeout(function() { // Make a popup window appear with correct/incorrect message
+        setTimeout(function() {  // Hides popups windows after delay and moves to the next question
         correct_popup.style.display = "none";
         incorrect_popup.style.display = "none";
                        
         questionIndex++;  //Next question
         if (questionIndex < myQuestions.length) { // If there are more question show the next
         showQuestion();
-        } else { // If the isn´t more questions 
+        } else { // If there isn´t more questions 
         clearInterval(timer);
         showResult("Quiz finished! You scored: " + score + " out of 100.");
         restartQuiz();
@@ -165,13 +165,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function showResult(){
-            quizWindow[0].style.display = "none";
-            resultWindow[0].style.display = "block";
+            quizWindow[0].style.display = "none"; // Quiz window not visible when quiz ends
+            resultWindow[0].style.display = "block"; // Resultwindow is visible when quiz ends
             totalscore[0].textContent = "Your total score:" + score + "/100";
-            playAgain.style.display = "block";
-            home.style.display = "block";
+            playAgain.style.display = "block"; // Play again button is visible when quiz ends
+            home.style.display = "block"; // Home button is visible when quiz ends
 
-            playAgain.addEventListener("click", function () {
+            playAgain.addEventListener("click", function () { // Pressing play again button restarts the quiz
                 
                 restartQuiz();
             });
