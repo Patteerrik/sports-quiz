@@ -1,6 +1,6 @@
 
-// This ensures that the javacode doesn´t run before html is fully loaded 
-document.addEventListener("DOMContentLoaded", function () {
+    // This ensures that the javacode doesn´t run before html is fully loaded 
+    document.addEventListener("DOMContentLoaded", function () {
 
     // An array with questions with four options with one correct answer 
     // myQuestion structure inspired by https://www.sitepoint.com/simple-javascript-quiz/
@@ -83,18 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
     var incorrect_popup = document.querySelector(".incorrect_popup");
     var TimerInterval;
 
+    // Function to display the current question
     function showQuestion() {
         
         clearInterval(TimerInterval); // Clearing the timer interval
-        
         if (questionIndex < myQuestions.length) { // If there are more questions
         var currentQuestion = myQuestions[questionIndex];
         questionElement.textContent = currentQuestion.question; // Display the question
         for (var i = 0; i < currentQuestion.options.length; i++) {
             optionsElements[i].textContent = currentQuestion.options[i]; // Display the options
         }
-        
-        startTimer();
+        startTimer(); //Start the countdown for current question
     }
     }
 
@@ -177,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
        
-    
     showQuestion();
     });
 
