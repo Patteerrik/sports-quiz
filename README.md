@@ -1,11 +1,12 @@
 # Sports quiz
 
-![Alt text](assets/images/Readme_Am_I_responsive.png)
+![Alt text](assets/images/Readme_images/Readme_Am_I_responsive.png)
 
 ## Features
 * Header 
    * On top of the page is the title 
    * This tells the user what the page offers
+![Alt text](assets/images/Readme_images/Readme_header.png)
    
 * Timer
 * Clickable links
