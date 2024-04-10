@@ -37,13 +37,18 @@ body {
         padding: 2px;
         
     }
+
+    .welcomewin, h1 {
+        font-size:28px;
+    }
+    
     /*p*/
     .content {
         text-align: center;
         width: 100%;
         font-size: 1.3rem;
     }
-    
+
     /*start button*/
     .takequiz {
         background:white;    
