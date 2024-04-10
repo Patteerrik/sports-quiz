@@ -43,8 +43,8 @@ body {
         width: 100%;
         font-size: 1.3rem;
     }
+    
     /*start button*/
-    #highscorebutton, #rules,
     .takequiz {
         background:white;    
         padding: 8px;
@@ -58,6 +58,20 @@ body {
         cursor: pointer;
         margin-bottom: 15px;
     }
+
+    #rules {
+        background:white;    
+        padding: 10px;
+        color: #000; 
+        border: 1px solid #000; 
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 18px;
+        width: auto; 
+        margin: 0 auto;
+        cursor: pointer;
+        margin-bottom: 15px;
+     }
 
     .takequiz a {
         text-decoration: none;
