@@ -16,5 +16,6 @@
 ## Favicon
 
 * The favicon is a football so that the user easily can navigate to the site when multible tabs are open
-![Alt text](assets/images/)
+
+![Alt text](assets/images/Readme_images/README_logo.png)
 
