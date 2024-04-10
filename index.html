@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Quiz, sports, game, questions, answer, options, fun, challenge">
+    <meta name="description" content="Sports quiz">
     <!-- Connected to css style file -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Favicon -->
@@ -15,27 +18,26 @@
 </head>
 
 <body>
-    
+
     <div class="welcomewin">
-        <!-- Welcoming header -->
-    <h1>Welcome to this sports Quiz! <br> <i class="fa-solid fa-heart-pulse"></i></i></h1>
-    
+        <!-- Welcoming header -->                     <!--  Font awesome icon  -->
+        <h1>Welcome to this sports Quiz! <br> <i class="fa-solid fa-heart-pulse"></i></i></h1>
         <div class="content">
             <!-- Welcome content -->
             <p>Are you a sportsfan? <br>You will now get to test your knowledge with 10 questions.</p>
             <div class="startbuttons">
-            <button id="rules">Rules</button>
-            <button class="takequiz">
-                <a href="quiz.html">Start</a>
-            </button>
-            <!-- <button id="highscorebutton">Highscore
-            </button> -->
+                <!-- Rules button -->
+                <button id="rules">Rules</button>
+                <!-- Start button -->
+                <button class="takequiz">
+                    <a href="quiz.html">Start</a>
+                </button>
             </div>
             <!-- Rules window -->
             <div id="rwindow">
                 <!-- Button to close the ruleswindow -->
                 <button id="closewindow">X</button>
-                <ul>
+                <ul>  <!-- Quizrules -->
                     <li>You will answer 10 questions</li>
                     <li>There are 4 options</li>
                     <li>10 seconds to answer each</li>
@@ -44,19 +46,11 @@
                     <li>You will get the score after all questions are answered</li>
                 </ul>
             </div>
-
-           <!-- <div id="highscorelist"></div> -->
-        
-        
+        </div>
     </div>
-
-    </div>
-    <!--Font awesome CHECK BEFORE SUBMIT!!!!-->
+    <!--Font awesome -->
     <script src="https://kit.fontawesome.com/ab7ad5c24c.js" crossorigin="anonymous"></script>
- 
     <!-- Connected to javascript rules file -->
     <script src="assets/js/rules.js"></script>
-
 </body>
-
 </html>

@@ -18,4 +18,4 @@ document.addEventListener("DOMContentLoaded", function () {
     closeRulesButton.addEventListener("click", function () {
         rulesWindow.style.display = "none";
     });
-})
+});
