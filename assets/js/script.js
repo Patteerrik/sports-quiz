@@ -138,10 +138,10 @@
 
     function startTimer() {
         timercount = 10;
-        timer.innerHTML = `00:${timercount}`; // Insert timer number 00:10
+        timer.innerHTML = '00:' + timercount; // Insert timer number 00:10
         TimerInterval = setInterval(function () {
         timercount--;
-        timer.innerHTML = `00:${timercount}`;
+        timer.innerHTML = '00:' + timercount;
         if (timercount === 0) { 
         clearInterval(TimerInterval);
         if (questionIndex < myQuestions.length) {
