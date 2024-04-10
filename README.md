@@ -5,7 +5,7 @@
 ## Features
 * Header 
    * On top of the page is the title 
-   * This tells the user what the page offers
+   * This tells the user what the page is about
 ![Alt text](assets/images/Readme_images/Readme_header.png)
    
 * Timer
