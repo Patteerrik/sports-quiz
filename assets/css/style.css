@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@200;300;400;500&family=Poppins:ital,wght@1,200;1,300;1,400;1,500&display=swap');
 
 * {
-    box-sizing: border-box;
+        box-sizing: border-box;
 }
 
 
 
-body {
-    height: 100vh;
-    background: linear-gradient(#a1c4fd,#c2e9fb);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Poppins";
-    margin: 0;
+    body {
+        height: 100vh;
+        background: linear-gradient(#a1c4fd,#c2e9fb);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins";
+        margin: 0;
     
 }
 
@@ -35,13 +35,12 @@ body {
         max-width: 600px;
         max-height: 300px;
         padding: 2px;
-        
     }
 
     .welcomewin, h1 {
         font-size:28px;
     }
-    
+
     /*p*/
     .content {
         text-align: center;
@@ -50,7 +49,7 @@ body {
     }
 
     /*start button*/
-    .takequiz {
+    .takequiz, #rules {
         background:white;    
         padding: 8px;
         color: #000; 
@@ -65,17 +64,8 @@ body {
     }
 
     #rules {
-        background:white;    
         padding: 10px;
-        color: #000; 
-        border: 1px solid #000; 
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 18px;
-        width: auto; 
-        margin: 0 auto;
-        cursor: pointer;
-        margin-bottom: 15px;
+        font-style:italic;
      }
 
     .takequiz a {
@@ -379,7 +369,6 @@ body {
     text-transform: uppercase;
     text-align: center;
     position: absolute;
-    top: 100px;
 }
 
 /*h2 quiz.html*/
@@ -479,11 +468,6 @@ body {
 #rwindow ul li{
     font-size:18px;
     padding-left:2px;
-}
-
-.takequiz:hover,
-#rules:hover {
-    background: #bfd3f3; 
 }
 
 .takequiz:hover,
