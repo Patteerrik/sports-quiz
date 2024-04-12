@@ -115,7 +115,7 @@
                        
         questionIndex++;  //Next question
         if (questionIndex < myQuestions.length) { 
-        showQuestion(); // Show the next question
+        showQuestion(); 
         } else { // If there aren´t any more questions 
         clearInterval(timer);
         showResult("Quiz finished! You scored: " + score + " out of 100.");
@@ -124,7 +124,7 @@
         },3000); //3 seconds paus until the next question
     }
 }
-    // Function for restarting the timer
+    // Function for restarting the quiz
     function restartQuiz() {
         questionIndex = 0;
         score = 0;
@@ -136,6 +136,7 @@
     /* Inspiration from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
     and https://www.youtube.com/watch?v=_a4XCarxwr8&list=PLsRF5B5IuysdxhEvtJUeiabNHVNMhgS6Z&index=50&t=311s */
 
+    // Function for timer countdown
     function startTimer() {
         timercount = 10;
         timer.innerHTML = '00:' + timercount; // Insert timer number 00:10
@@ -159,7 +160,7 @@
         // Eventlistener to answer options
         optionsElements.forEach(function (optionElement) {
         optionElement.addEventListener("click", function () {
-        var selectedAnswer = optionElement.textContent; //
+        var selectedAnswer = optionElement.textContent; 
         showAnswer(selectedAnswer); 
         });
     });
@@ -167,7 +168,7 @@
     function showResult(){
             quizWindow[0].style.display = "none"; // Quiz window not visible when quiz ends
             resultWindow[0].style.display = "block"; // Resultwindow is visible when quiz ends
-            totalscore[0].textContent = "Your total score:" + score + "/100";
+            totalscore[0].textContent = "Your total score:" + score + "/100"; // Total score after quiz ends
             playAgain.style.display = "block"; // Play again button is visible when quiz ends
             home.style.display = "block"; // Home button is visible when quiz ends
 

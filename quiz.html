@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Quiz, sports, game, questions, answer, options, fun, challenge">
@@ -10,6 +11,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+
     <title>Sports quiz!</title>
 </head>
 <body>
@@ -22,6 +24,7 @@
             <h2 id="question">Question</h2>
             <div id="timer"></div>
             <div class="answerbuttons">
+                <!-- Quiz buttons -->
                 <button class="answer">Answer</button>
                 <button class="answer">Answer</button>
                 <button class="answer">Answer</button>
@@ -32,7 +35,7 @@
         <div class="button-window">
         <a class="gamebuttons" id="playagainbutton" href="quiz.html" style="display:none ">Play again</a><br>
         <a class="gamebuttons" id="homebutton" style="display:none ;" href="index.html">Home</a>
-       <!-- <a class="gamebuttons" id="highscorebutton" href="">Highscore</a> -->
+       
         </div>
     </div>
     <!-- Popup window that appears when answering a question -->
@@ -41,10 +44,9 @@
         <div class="incorrect_popup">Incorrect!<br><i class="fa-solid fa-circle-xmark fa-beat"></i></div>
     </div>
     <!-- https://www.youtube.com/watch?v=pQr4O1OITJo&t=2538s -->
+    <!-- Popup window with results that appears when quiz is finished -->
     <div class="resultwindow">
         <div class="icon"><i class="fa-solid fa-graduation-cap fa-beat"></i></div>
-    <!-- Popup window that appears when quiz i finished -->
-        
         <div class="quizcomplete"> Gongratulations. You finished the quiz</div>
         <div class="totalscore">Your total score:</div>
         <!-- Buttons that appears when quiz i finished -->
