@@ -12,6 +12,8 @@
    * The quiz will start by clicking on the "start quiz" button
    * When clicking on the rules button a window will appear with rules for the game
 ![Alt text](assets/images/Readme_images/README_body_index.html.png)
+* 
+![Alt text](assets)
 
 ## Quizpage
 
