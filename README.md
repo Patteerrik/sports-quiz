@@ -88,6 +88,20 @@
 ### quiz.html
 ![Alt text](assets/images/Readme_images/README_quiz.html_lighthouse.png)
 
+## Manual testing
+
+| Action | Expectation | Result|
+| --- | --- | --- |
+| Press rules button | Rules window appears | Rules window appears | 
+| Press rules closing button | Rules window disappears | Rules window disappears | 
+| Press start quiz | Quiz starts | Quiz starts | 
+| Press answer button | popup window appears and the next question appears |popup window appears and the next question appears | 
+| Press play again button | Quiz restarts | Quiz restarts |
+| Press home button | User is directed to home.html | User is directed to home.html |
+
+## Bugs 
+
+
 ## Deployment
 
 * This site was deployed to Github pages.
