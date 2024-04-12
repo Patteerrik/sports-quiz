@@ -45,9 +45,40 @@
 
 ![Alt text](assets/images/Readme_images/README_logo.png)
 
-## Validator testing 
+## Testing browsers
 
-* 
+* The quiz is tested on Safari, Egge, Firefox and Google chrome
+
+## Validator testing 
+### HTML
+* index.html
+  *  No errors where found using [W3C VALIDATOR](https://validator.w3.org/)
+
+  ![Alt text](assets/images/Readme_images/Html_index.html_htmlchecker.png)
+
+* quiz.html
+  *  No errors where found using [W3C VALIDATOR](https://validator.w3.org/) 
+
+  ![Alt text](assets/images/Readme_images/Html_quiz.html_htmlchecker.png)
+
+### CSS
+* style.css
+  *  No errors where found but one warning using [Jigsaw Validator](https://jigsaw.w3.org/css-validator/)  
+
+  ![Alt text](assets/images/Readme_images/Readme_style.css_css_checker.png)
+  ![Alt text](assets/images/Readme_images/Readme_style.css_css_checker_warning.png)
+
+### JAVASCRIPT
+* script.js
+  * No errors where found using [Jshint Validator](https://jshint.com/)  
+
+  ![Alt text](assets/images/Readme_images/Readme_script.js_jschecker.png)
+
+* rules.js
+  * No errors where found using [Jshint Validator](https://jshint.com/) 
+
+  ![Alt text](assets/images/Readme_images/Readme_rules.js_jschecker.png)  
+
 
 ## Lighthouse testing
 
@@ -57,5 +88,21 @@
 ### quiz.html
 ![Alt text](assets/images/Readme_images/README_quiz.html_lighthouse.png)
 
+## Deployment
+
+* This site was deployed to Github pages.
+  * Go to the settings tab in Github repository
+  * Select pages on the menu on the left side navigation bar 
+  * In the Build and deployment section set the source to deploy from a branch and set the branch to main and root
+  * Click save
+  * Your site is now deployd to Github 
+  * The live link can be found here [Sports quiz!](https://patteerrik.github.io/sports-quiz/)
 
 ## Credits
+
+* [Favicon.io](https://favicon.io/) was used to create the favicon
+* [Fontawesome](https://fontawesome.com/) was used for all fonts
+* [Am I responsive](https://ui.dev/amiresponsive) was used along with Google chrome devtools to see how the site looked on various devices
+* A big credit to
+  * My mentor Gareth McGirr
+  * John from code institute
