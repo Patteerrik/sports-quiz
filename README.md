@@ -1,4 +1,5 @@
 # Sports quiz
+* This sports quiz is a fun game for everyone interested in sports. The quiz will test the user under pressure because of the timer and it´s impact on the result. It´s not enough to know the answers. The user must be quick.
 
 ![Alt text](assets/images/Readme_images/Readme_Am_I_responsive.png)
 
@@ -32,6 +33,11 @@
 
 ![Alt text](assets/images/Readme_images/README_body_quiz.html.png)
 
+### Score
+* The score will appear when the last question is answered or the timer goes to 0
+
+![Alt text](assets/images/Readme_images/README_score_quiz.html.png)
+
 
 ## Favicon
 
@@ -46,3 +52,6 @@
 
 ### quiz.html
 ![Alt text](assets/images/Readme_images/README_quiz.html_lighthouse.png)
+
+
+## Credits
