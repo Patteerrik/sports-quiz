@@ -45,7 +45,11 @@
 
 ![Alt text](assets/images/Readme_images/README_logo.png)
 
-## Lighthouse
+## Validator testing 
+
+* 
+
+## Lighthouse testing
 
 ### index.html
 ![Alt text](assets/images/Readme_images/Readme_index.html_lighthouse.png)
