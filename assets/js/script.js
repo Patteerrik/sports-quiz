@@ -96,12 +96,12 @@
         startTimer(); //Start the countdown for current question
     }
     }
-
+    // Function for user answer
     function showAnswer(selectedAnswer) {
         clearInterval(TimerInterval);
-        if (questionIndex < myQuestions.length) {
-        var correctAnswer = myQuestions[questionIndex].answer;
-        if (selectedAnswer === correctAnswer) {
+        if (questionIndex < myQuestions.length) { // If there are more questions
+        var correctAnswer = myQuestions[questionIndex].answer; // Get correct answer for current question
+        if (selectedAnswer === correctAnswer) { // If current answer is correct answer
         score += timercount; // If answer is correct score increases
         correct_popup.style.display = "block"; //Show correct popup when right answer selected
         } else {
