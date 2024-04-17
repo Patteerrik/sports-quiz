@@ -65,7 +65,7 @@
            options: ["United States", "United Kingdom", "France", "Australia"],
            answer: "United Kingdom",
         },
-    ];
+];
     
     //Declaring viariables
     var questionIndex = 0;
@@ -95,9 +95,10 @@
         }
         startTimer(); //Start the countdown for current question
     }
-    }
+}
     // Function for user answer
     function showAnswer(selectedAnswer) {
+
         clearInterval(TimerInterval);
         if (questionIndex < myQuestions.length) { // If there are more questions
         var correctAnswer = myQuestions[questionIndex].answer; // Get correct answer for current question
@@ -108,7 +109,7 @@
         incorrect_popup.style.display = "block"; // Show incorrect popup when wrong answer selected
         } 
 
-        optionsElements.forEach(function(optionElement) { //Prevents double click for 3 seconds
+        optionsElements.forEach(function(optionElement) { //Prevents double click by disable options for 3 seconds
            optionElement.disabled = true;
         });
 
@@ -116,10 +117,11 @@
         // Inspiration from https://www.w3schools.com/jsref/met_win_settimeout.asp
 
         setTimeout(function() {  // Hides popups windows after delay and moves to the next question
-        optionsElements.forEach(function(optionElement) { // Enables options
+
+        optionsElements.forEach(function(optionElement) { // Enables options after 3 seconds
             optionElement.disabled = false;
         });
-        correct_popup.style.display = "none"; // 
+        correct_popup.style.display = "none"; 
         incorrect_popup.style.display = "none";
                        
         questionIndex++;  //Next question
@@ -135,18 +137,20 @@
 }
     // Function for restarting the quiz
     function restartQuiz() {
+
         questionIndex = 0;
         score = 0;
         playAgain.style.display = "block"; // Makes play again button visible
         home.style.display = "block"; // Makes home button visible
         showQuestion();
-    }
+}
 
     /* Inspiration from https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript
     and https://www.youtube.com/watch?v=_a4XCarxwr8&list=PLsRF5B5IuysdxhEvtJUeiabNHVNMhgS6Z&index=50&t=311s */
 
     // Function for timer countdown
     function startTimer() {
+
         timercount = 10;
         timer.innerHTML = '00:' + timercount; // Insert timer number 00:10
         TimerInterval = setInterval(function () {
@@ -163,9 +167,9 @@
         restartQuiz();
     }
 
-            }
-        }, 1000);
-    }  
+        }
+    }, 1000);
+}  
         // Eventlistener to answer options
         optionsElements.forEach(function (optionElement) {
         optionElement.addEventListener("click", function () {
@@ -173,22 +177,23 @@
         showAnswer(selectedAnswer); 
         });
     });
-
+    // Function for quiz result
     function showResult(){
-            quizWindow[0].style.display = "none"; // Quiz window not visible when quiz ends
-            resultWindow[0].style.display = "block"; // Resultwindow is visible when quiz ends
-            totalscore[0].textContent = "Your total score:" + score + "/100"; // Total score after quiz ends
-            playAgain.style.display = "block"; // Play again button is visible when quiz ends
-            home.style.display = "block"; // Home button is visible when quiz ends
 
-            playAgain.addEventListener("click", function () { // Pressing play again button restarts the quiz
+        quizWindow[0].style.display = "none"; // Quiz window not visible when quiz ends
+        resultWindow[0].style.display = "block"; // Resultwindow is visible when quiz ends
+        totalscore[0].textContent = "Your total score:" + score + "/100"; // Total score after quiz ends
+        playAgain.style.display = "block"; // Play again button is visible when quiz ends
+        home.style.display = "block"; // Home button is visible when quiz ends
+
+        playAgain.addEventListener("click", function () { // Pressing play again button restarts the quiz
                 
-                restartQuiz();
-            });
-    }
+        restartQuiz();
+        });
+}
        
-    showQuestion();
-    });
+        showQuestion();
+});
 
 
 
