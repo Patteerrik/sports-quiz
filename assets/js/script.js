@@ -102,15 +102,24 @@
         if (questionIndex < myQuestions.length) {
         var correctAnswer = myQuestions[questionIndex].answer;
         if (selectedAnswer === correctAnswer) {
-        score += timercount;
+        score += timercount; // If answer is correct score increases
         correct_popup.style.display = "block"; //Show correct popup when right answer selected
         } else {
         incorrect_popup.style.display = "block"; // Show incorrect popup when wrong answer selected
         } 
+
+        optionsElements.forEach(function(optionElement) { //Prevents double click for 3 seconds
+           optionElement.disabled = true;
+        });
+
+
         // Inspiration from https://www.w3schools.com/jsref/met_win_settimeout.asp
 
         setTimeout(function() {  // Hides popups windows after delay and moves to the next question
-        correct_popup.style.display = "none";
+        optionsElements.forEach(function(optionElement) { // Enables options
+            optionElement.disabled = false;
+        });
+        correct_popup.style.display = "none"; // 
         incorrect_popup.style.display = "none";
                        
         questionIndex++;  //Next question
