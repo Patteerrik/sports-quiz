@@ -100,7 +100,8 @@
 | Press home button | User is directed to home.html | User is directed to home.html |
 
 ## Bugs 
-
+* An error message appeared (GET https://8000-patteerrik-sportsquiz-4sb3rr13zvr.ws-eu110.gitpod.io/assets/favicon/site.webmanifest 404 (Not Found))
+* It was solved with removing a link(link rel="manifest" href="assets/favicon/site.webmanifest") in my html.
 
 ## Deployment
 
