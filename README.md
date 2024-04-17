@@ -47,7 +47,7 @@
 
 ## Testing browsers
 
-* The quiz is tested on Safari, Egge, Firefox and Google chrome
+* The quiz is tested on browsers Safari, Edge, Firefox and Google chrome. It is also tested on both Samsung and Iphone
 
 ## Validator testing 
 ### HTML
