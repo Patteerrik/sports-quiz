@@ -45,7 +45,7 @@
 
 ![Alt text](assets/images/Readme_images/README_logo.png)
 
-## Testing browsers
+## Testing browsers and responsiveness
 
 * The quiz is tested on browsers Safari, Edge, Firefox and Google chrome. It is also tested on both Samsung and Iphone
 
@@ -102,6 +102,11 @@
 ## Bugs 
 * An error message appeared (GET https://8000-patteerrik-sportsquiz-4sb3rr13zvr.ws-eu110.gitpod.io/assets/favicon/site.webmanifest 404 (Not Found))
 * It was solved with removing a link(link rel="manifest" href="assets/favicon/site.webmanifest") in my html.
+
+## Features left to implement
+
+* Function to add different questions every new game
+* Function to save highscore and username
 
 ## Deployment
 
