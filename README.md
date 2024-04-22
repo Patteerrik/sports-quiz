@@ -108,6 +108,12 @@
 * Function to add different questions every new game
 * Function to save highscore and username
 
+## Language used
+
+* HTML
+* CSS
+* JAVASCRIPT
+
 ## Deployment
 
 * This site was deployed to Github pages.
