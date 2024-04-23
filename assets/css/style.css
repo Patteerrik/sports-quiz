@@ -93,7 +93,6 @@
     }
         
     #rwindow ul {
-        list-style-type: non;
         padding-left: 0; 
         text-align: left;
     }
@@ -113,7 +112,6 @@
         cursor: pointer;
         }
     
-
     /* quiz.html */
 
     .quiz-window {
@@ -270,10 +268,10 @@
     }
 
     .icon {
-        font-size:25px
+        font-size:25px;
     }
 
-   .resultbtnS{
+   .resultbtnS {
         text-decoration:none;
         text-align:center;
         margin-top:35px;
@@ -288,7 +286,7 @@
         transform: translate(-50%);
     }
     
-    .resultbtnS a{
+    .resultbtnS a {
         background:white;
         color: black;
         border-radius: 10px;
@@ -311,7 +309,7 @@
     }
 
     #question {
-        font-size:17px
+        font-size:17px;
     }
 
     #timer {
@@ -423,11 +421,11 @@
     }
 
     .quizcomplete, .totalscore {
-        font-size:22px
+        font-size:22px;
     }
 
     .icon {
-        font-size:30px
+        font-size:30px;
      }
 
     .resultbtnS {
@@ -446,7 +444,7 @@
 
     /*h1 on index.html*/
     .welcomewin {
-        width:70%;
+        width: 70%;
         height: 250px;
     }
 

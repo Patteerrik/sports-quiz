@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (rulesWindow.style.display === "none") {
             rulesWindow.style.display = "block";
         } else {
-            // If it is displayed it it stays displayed
+            // If it is displayed it stays displayed
             rulesWindow.style.display = "block";
         }
     });
