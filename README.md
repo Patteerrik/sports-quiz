@@ -25,7 +25,7 @@
 ![Alt text](assets/images/Readme_images/README_header_quiz.html.png)
 ### Body 
 * Quiz has started
-* The timer starts immediately when the question appears
+* The timer starts immediately when the questions appears
 * The user now have 4 options
 * By clicking on the correct answer, a popup message appears that says "Correct!"
 * By clicking on the incorrect answer, a popup message appears that says "Incorrect!"
@@ -95,7 +95,7 @@
 | Press rules button | Rules window appears | Rules window appears | 
 | Press rules closing button | Rules window disappears | Rules window disappears | 
 | Press start quiz | Quiz starts | Quiz starts | 
-| Press answer button | popup window appears and the next question appears |popup window appears and the next question appears | 
+| Press answer button | Popup window appears and the next question displayes after 3 seconds | Popup window appears and the next question displayes after 3 seconds | 
 | Press play again button | Quiz restarts | Quiz restarts |
 | Press home button | User is directed to home.html | User is directed to home.html |
 
