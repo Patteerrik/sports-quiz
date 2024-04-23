@@ -121,6 +121,7 @@
         optionsElements.forEach(function(optionElement) { // Enables options after 3 seconds
             optionElement.disabled = false;
         });
+        // Hides popups after 3 seconds
         correct_popup.style.display = "none"; 
         incorrect_popup.style.display = "none";
                        
@@ -138,8 +139,8 @@
     // Function for restarting the quiz
     function restartQuiz() {
 
-        questionIndex = 0;
-        score = 0;
+        questionIndex = 0; // Starts with first question
+        score = 0; // Score resets to 0
         playAgain.style.display = "block"; // Makes play again button visible
         home.style.display = "block"; // Makes home button visible
         showQuestion();
@@ -151,24 +152,25 @@
     // Function for timer countdown
     function startTimer() {
 
-        timercount = 10;
+        timercount = 10; // Timer starts at 10 seconds
         timer.innerHTML = '00:' + timercount; // Insert timer number 00:10
         TimerInterval = setInterval(function () {
-        timercount--;
+        timercount--; // Timer counting down
         timer.innerHTML = '00:' + timercount;
-        if (timercount === 0) { 
-        clearInterval(TimerInterval);
-        if (questionIndex < myQuestions.length) {
-        questionIndex++;
+        // If timer reach 0 stop timer
+        if (timercount === 0) { // If timer reach 0
+        clearInterval(TimerInterval); 
+        if (questionIndex < myQuestions.length) { // Checks if last question
+        questionIndex++; // Next question
         showQuestion();
     }
-        if (questionIndex === myQuestions.length){ // Ends the quiz if it is the last question
-        showResult("Time´s up! You scored: " + score + " out of 100.");
+        if (questionIndex === myQuestions.length){ // Show score message if it is the last question
+        showResult("Time´s up! You scored: " + score + " out of 100."); // Score message
         restartQuiz();
     }
 
         }
-    }, 1000);
+    }, 1000); 
 }  
         // Eventlistener to answer options
         optionsElements.forEach(function (optionElement) {
