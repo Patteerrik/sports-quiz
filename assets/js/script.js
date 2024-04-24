@@ -1,5 +1,5 @@
 
-    // This ensures that the javacode doesn´t run before html is fully loaded 
+    // This ensures that the javascript code doesn´t run before html is fully loaded 
     document.addEventListener("DOMContentLoaded", function () {
 
     // An array with questions with four options with one correct answer 
