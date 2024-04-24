@@ -26,7 +26,7 @@
 ### Body 
 * Quiz has started
 * The timer starts immediately when the questions appears
-* The user now have 4 options
+* The user now has 4 options
 * By clicking on the correct answer, a popup message appears that says "Correct!"
 * By clicking on the incorrect answer, a popup message appears that says "Incorrect!"
 * The faster the user answers, the higher the score
