@@ -129,6 +129,7 @@
 * [Favicon.io](https://favicon.io/) was used to create the favicon
 * [Fontawesome](https://fontawesome.com/) was used for all fonts
 * [Am I responsive](https://ui.dev/amiresponsive) was used along with Google chrome devtools to see how the site looked on various devices
+* Sources of inspiration are clearly commented in the code
 * A big credit to
   * My mentor Gareth McGirr
   * John from code institute
