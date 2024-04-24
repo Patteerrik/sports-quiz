@@ -102,6 +102,8 @@
 ## Bugs 
 * An error message appeared (GET https://8000-patteerrik-sportsquiz-4sb3rr13zvr.ws-eu110.gitpod.io/assets/favicon/site.webmanifest 404 (Not Found))
 * It was solved with removing a link(link rel="manifest" href="assets/favicon/site.webmanifest") in my html.
+* An error message appeared that script.js was trying to load on both html pages.
+* It was solved by creating the rules.js file
 
 ## Features left to implement
 
