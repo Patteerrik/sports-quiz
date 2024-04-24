@@ -116,7 +116,7 @@
 
         // Inspiration from https://www.w3schools.com/jsref/met_win_settimeout.asp
 
-        setTimeout(function() {  // Hides popups windows after delay and moves to the next question
+        setTimeout(function() { 
 
         optionsElements.forEach(function(optionElement) { // Enables options after 3 seconds
             optionElement.disabled = false;
@@ -160,7 +160,7 @@
         // If timer reach 0 stop timer
         if (timercount === 0) { // If timer reach 0
         clearInterval(TimerInterval); 
-        if (questionIndex < myQuestions.length) { // Checks if last question
+        if (questionIndex < myQuestions.length) { // Checks if more questions
         questionIndex++; // Next question
         showQuestion();
     }
